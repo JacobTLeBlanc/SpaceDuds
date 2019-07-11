@@ -21,8 +21,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-        
+        if (transform.position.y < 5 && transform.position.y > -5)
+        {
+            vertical = Input.GetAxis("Vertical");
+        } 
+        else 
+        {
+            vertical = 0;
+        }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
