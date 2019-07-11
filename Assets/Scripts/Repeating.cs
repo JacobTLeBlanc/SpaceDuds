@@ -26,9 +26,7 @@ public class Repeating : MonoBehaviour
 
     void RepositionBackground()
     {
-        horizontalOffset = Random.Range(-10.0f, 10.0f);
-
-        Vector2 groundOffset = new Vector2(horizontalOffset, verticalLength * 2f);
+        Vector2 groundOffset = new Vector2(0, verticalLength * 2f);
         transform.position = (Vector2) transform.position + groundOffset;
     }
 }

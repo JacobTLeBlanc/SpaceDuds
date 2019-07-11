@@ -6,7 +6,7 @@ public class ScrollingObject : MonoBehaviour
 {
     Rigidbody2D rb2d;
 
-    public float scrollingSpeed = -3.0f;
+    public float scrollingSpeed = -2.0f;
 
     // Start is called before the first frame update
     void Start()
