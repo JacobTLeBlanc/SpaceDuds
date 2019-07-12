@@ -1318,11 +1318,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1622726324}
     m_Modifications:
-    - target: {fileID: 8149486829424546900, guid: 4453943f2f11532d58eb0b86fdc69c2b,
-        type: 3}
-      propertyPath: scrollingSpeed
-      value: -3
-      objectReference: {fileID: 0}
     - target: {fileID: 3104457486975228932, guid: 4453943f2f11532d58eb0b86fdc69c2b,
         type: 3}
       propertyPath: m_Name
@@ -1382,6 +1377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149486829424546900, guid: 4453943f2f11532d58eb0b86fdc69c2b,
+        type: 3}
+      propertyPath: scrollingSpeed
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5671639258150334135, guid: 4453943f2f11532d58eb0b86fdc69c2b,
         type: 3}
