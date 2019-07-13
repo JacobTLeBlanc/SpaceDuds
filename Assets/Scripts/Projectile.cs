@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         // If distance greater than 10 units destroy bullet
-        if (transform.position.magnitude > 10.0f)
+        if (transform.position.magnitude > 20.0f)
         {
             Destroy(gameObject);
         }

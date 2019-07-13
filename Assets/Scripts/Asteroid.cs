@@ -16,6 +16,7 @@ public class Asteroid : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         rotationSpeed = 0.0f;
+        destroyTimer = timerLength;
     }
 
     // Update is called once per frame
@@ -23,7 +24,11 @@ public class Asteroid : MonoBehaviour
     {
         transform.Rotate(0, 0, rotationSpeed);
 
-        
+        destroyTimer -= Time.deltaTime;
+        if (destroyTimer < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Destroy on collison
