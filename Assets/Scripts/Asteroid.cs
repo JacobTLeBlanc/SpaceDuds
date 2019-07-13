@@ -38,8 +38,12 @@ public class Asteroid : MonoBehaviour
 
         if (bullet != null)
         {
-            breakAsteroid(VectorRand());
-            breakAsteroid(VectorRand());
+            int Rand = Random.Range(1, 3);
+
+            for (int i = 0; i < Rand; i++)
+            {
+                breakAsteroid(VectorRand());
+            }
             Destroy(gameObject);
         }
     }
