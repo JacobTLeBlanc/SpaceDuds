@@ -28,4 +28,10 @@ public class Projectile : MonoBehaviour
     {
         rb2d.AddForce(direction * force); // Add force to bullet
     }
+
+    // Destroy Projectile on collison
+    void OnCollisionEnter2D()
+    {
+        Destroy(gameObject);
+    }
 }

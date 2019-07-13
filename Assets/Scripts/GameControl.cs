@@ -43,6 +43,7 @@ public class GameControl : MonoBehaviour
 
     void spawnAsteroid()
     {
-        
+        Vector2 position = new Vector2(0, 10);
+        Instantiate(greyBigAsteroid, position, Quaternion.identity);
     }
 }
