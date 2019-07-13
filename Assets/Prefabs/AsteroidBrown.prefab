@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4401384021810447196}
   - component: {fileID: 4920280553002053788}
   - component: {fileID: 515582148524300768}
-  m_Layer: 0
+  - component: {fileID: -6875636752126938562}
+  m_Layer: 11
   m_Name: AsteroidBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,5 +204,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bd04c0ae8fa594fda8766d01e4f903b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6875636752126938562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909207516573845787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e9a0293a3e65df08dac02940a3cafa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

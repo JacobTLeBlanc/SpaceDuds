@@ -7,13 +7,14 @@ public class GameControl : MonoBehaviour
     public static GameControl instance; // This instance
     public float scrollSpeed = -3.0f; // Scroll Speed
     float asteroidTimer;
-    public float timerLength = 3.0f;
+    public float timerLength = 0.5f;
 
     // Asteroids
     public GameObject brownAsteroid;
     public GameObject greySmallAsteroid;
     public GameObject greyBigAsteroid;
     public GameObject lightGreyAsteroid;
+    public GameObject[] asteroids = new GameObject[4];
 
     // Start is called before the first frame update
     void Awake()
@@ -27,6 +28,11 @@ public class GameControl : MonoBehaviour
 
         // Start timer
         asteroidTimer = timerLength;
+
+        asteroids[0] = brownAsteroid;
+        asteroids[1] = greySmallAsteroid;
+        asteroids[2] = greyBigAsteroid;
+        asteroids[3] = lightGreyAsteroid;
     }
 
     // Update is called once per frame
@@ -43,7 +49,10 @@ public class GameControl : MonoBehaviour
 
     void spawnAsteroid()
     {
-        Vector2 position = new Vector2(0, 10);
-        Instantiate(greyBigAsteroid, position, Quaternion.identity);
+        int randAsteroid = Random.Range(0, 3);
+        float randXPos = Random.Range(-15.0f, 15.0f);
+
+        Vector2 position = new Vector2(randXPos, 10);
+        Instantiate(asteroids[randAsteroid], position, Quaternion.identity);
     }
 }
