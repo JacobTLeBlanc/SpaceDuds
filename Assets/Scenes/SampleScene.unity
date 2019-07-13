@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -3
-  timerLength: 0.5
+  timerLength: 0.3
   brownAsteroid: {fileID: 1909207516573845787, guid: 1181773f80aaaa85bb8f097ab72489db,
     type: 3}
   greySmallAsteroid: {fileID: 4289718541578990203, guid: d5a8ecf5d4c670a82b724c12c0676ff6,
