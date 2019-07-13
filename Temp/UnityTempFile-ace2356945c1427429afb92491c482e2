@@ -299,7 +299,7 @@
 /define:UNITY_TEAM_LICENSE
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-"Assets/Scripts/NewBehaviourScript.cs"
+"Assets/Scripts/GameControl.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Projectile.cs"
 "Assets/Scripts/Repeating.cs"

@@ -6,19 +6,12 @@ public class ScrollingObject : MonoBehaviour
 {
     Rigidbody2D rb2d;
 
-    public float scrollingSpeed = -3.0f;
-
     // Start is called before the first frame update
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        rb2d = GetComponent<Rigidbody2D>(); // Get RigidBogy component
 
-        rb2d.velocity = new Vector2(0, scrollingSpeed);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Scroll down as scroll speed (from GameControl)
+        rb2d.velocity = new Vector2(0, GameControl.instance.scrollSpeed);
     }
 }

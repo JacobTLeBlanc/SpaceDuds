@@ -10,20 +10,22 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        rb2d = GetComponent<Rigidbody2D>(); // Get RigidBody component
     }
 
     // Update is called once per frame
     void Update()
     {
+        // If distance greater than 10 units destroy bullet
         if (transform.position.magnitude > 10.0f)
         {
             Destroy(gameObject);
         }
     }
 
+    // Launch method
     public void Launch(Vector2 direction, float force)
     {
-        rb2d.AddForce(direction * force);
+        rb2d.AddForce(direction * force); // Add force to bullet
     }
 }

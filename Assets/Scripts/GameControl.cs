@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameControl : MonoBehaviour
 {
-    public static GameControl instance;
+    public static GameControl instance; // This instance
+    public float scrollSpeed = -3.0f; // Scroll Speed
 
     // Start is called before the first frame update
     void Awake()
