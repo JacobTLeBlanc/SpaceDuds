@@ -159,6 +159,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1466936020}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &618708314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 618708316}
+  - component: {fileID: 618708315}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &618708315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618708314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfef48a013b3e7756af31ad810b0dffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: -3
+  timerLength: 3
+  brownAsteroid: {fileID: 1909207516573845787, guid: 1181773f80aaaa85bb8f097ab72489db,
+    type: 3}
+  greySmallAsteroid: {fileID: 4289718541578990203, guid: d5a8ecf5d4c670a82b724c12c0676ff6,
+    type: 3}
+  greyBigAsteroid: {fileID: 8394256245519527665, guid: 9e363e91d1035de4e9e23803daa44194,
+    type: 3}
+  lightGreyAsteroid: {fileID: 8078541084545528517, guid: b90271de55d04830b9f57e87269358bb,
+    type: 3}
+--- !u!4 &618708316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618708314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &897999922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3898758449164327007, guid: 62336cc62174d744b97bb807da9751c7,
