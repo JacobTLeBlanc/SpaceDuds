@@ -6,7 +6,6 @@ public class Asteroid : MonoBehaviour
 {
     Rigidbody2D rb2d;
 
-    public float rotationSpeed;
     public float timerLength = 5.0f;
     float destroyTimer = 0.0f;
     
@@ -15,15 +14,12 @@ public class Asteroid : MonoBehaviour
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        rotationSpeed = 0.0f;
         destroyTimer = timerLength;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, rotationSpeed);
-
         destroyTimer -= Time.deltaTime;
         if (destroyTimer < 0)
         {
@@ -35,37 +31,28 @@ public class Asteroid : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         Projectile bullet = other.gameObject.GetComponent<Projectile>();
+        DestroyedAsteroid destroyed = other.gameObject.GetComponent<DestroyedAsteroid>();
 
-        if (bullet != null)
+        if (bullet != null && destroyed == null)
         {
             int Rand = Random.Range(1, 3);
 
             for (int i = 0; i < Rand; i++)
             {
-                breakAsteroid(VectorRand());
+                breakAsteroid();
             }
             Destroy(gameObject);
         }
     }
 
-    void breakAsteroid(Vector2 vector)
+    void breakAsteroid()
     {
         // Create new asteroid
         GameObject newAst = Instantiate(gameObject, this.transform.position, Quaternion.identity);
-        Rigidbody2D rb2d = newAst.GetComponent<Rigidbody2D>();
-        newAst.GetComponent<ScrollingObject>().enabled = false;
-        rb2d.velocity = vector; 
-        newAst.GetComponent<Asteroid>().rotationSpeed = Random.Range(-4.0f, 4.0f);
-        newAst.transform.localScale = this.transform.localScale * 0.5f;
+        newAst.transform.localScale = this.transform.localScale * Random.Range(0.3f, 0.8f);
+        newAst.AddComponent<DestroyedAsteroid>();
     }
 
-    Vector2 VectorRand()
-    {
-        float x = Random.Range(-3.0f, 3.0f);
-        float y = Random.Range(-1.0f, -4.0f);
-        Vector2 vector = new Vector2(x, y);
-
-        return vector;
-    }
+    
 
 }

@@ -300,6 +300,7 @@
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
 "Assets/Scripts/Asteroid.cs"
+"Assets/Scripts/DestroyedAsteroid.cs"
 "Assets/Scripts/GameControl.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Projectile.cs"

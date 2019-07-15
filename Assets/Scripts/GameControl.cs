@@ -42,17 +42,27 @@ public class GameControl : MonoBehaviour
 
         if (asteroidTimer < 0)
         {
-            spawnAsteroid();
+            SpawnAsteroid();
             asteroidTimer = timerLength;
         }
     }
 
-    void spawnAsteroid()
+    void SpawnAsteroid()
     {
         int randAsteroid = Random.Range(0, 3);
         float randXPos = Random.Range(-15.0f, 15.0f);
 
         Vector2 position = new Vector2(randXPos, 10);
         Instantiate(asteroids[randAsteroid], position, Quaternion.identity);
+    }
+
+    // Generate Random Vector2
+    public Vector2 VectorRand()
+    {
+        float x = Random.Range(-3.0f, 3.0f);
+        float y = Random.Range(-1.0f, -4.0f);
+        Vector2 vector = new Vector2(x, y);
+
+        return vector;
     }
 }
