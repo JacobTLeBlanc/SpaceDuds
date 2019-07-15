@@ -31,7 +31,7 @@ public class Asteroid : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         Projectile bullet = other.gameObject.GetComponent<Projectile>();
-        DestroyedAsteroid destroyed = other.gameObject.GetComponent<DestroyedAsteroid>();
+        DestroyedAsteroid destroyed = gameObject.GetComponent<DestroyedAsteroid>();
 
         if (bullet != null && destroyed == null)
         {

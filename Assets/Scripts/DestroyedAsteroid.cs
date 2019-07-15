@@ -26,4 +26,8 @@ public class DestroyedAsteroid : MonoBehaviour
         transform.Rotate(0, 0, rotationSpeed);
     }
 
+    void OnCollisionEnter2D()
+    {
+        Destroy(gameObject);
+    }
 }
