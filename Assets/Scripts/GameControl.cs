@@ -6,10 +6,10 @@ public class GameControl : MonoBehaviour
 {
     public static GameControl instance; // This instance
     public float scrollSpeed = -3.0f; // Scroll Speed
-    float asteroidTimer;
-    public float timerLength = 0.5f;
+    float asteroidTimer; // Spawn timer of asteroid
+    public float timerLength = 0.5f; // Length of spawn timer
 
-    // Asteroids
+    // Asteroids to spawn
     public GameObject brownAsteroid;
     public GameObject greySmallAsteroid;
     public GameObject greyBigAsteroid;
@@ -29,6 +29,7 @@ public class GameControl : MonoBehaviour
         // Start timer
         asteroidTimer = timerLength;
 
+        // Add asteroids to array 
         asteroids[0] = brownAsteroid;
         asteroids[1] = greySmallAsteroid;
         asteroids[2] = greyBigAsteroid;
@@ -38,8 +39,10 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Update timer
         asteroidTimer -= Time.deltaTime;
 
+        // Spawn asteroid when timer ends
         if (asteroidTimer < 0)
         {
             SpawnAsteroid();
@@ -47,11 +50,13 @@ public class GameControl : MonoBehaviour
         }
     }
 
+    // Spawn asteroid
     void SpawnAsteroid()
     {
-        int randAsteroid = Random.Range(0, 3);
-        float randXPos = Random.Range(-15.0f, 15.0f);
+        int randAsteroid = Random.Range(0, 4); // Pick asteroid
+        float randXPos = Random.Range(-15.0f, 15.0f); // Pick pos
 
+        // Create new game object with random X pos
         Vector2 position = new Vector2(randXPos, 10);
         Instantiate(asteroids[randAsteroid], position, Quaternion.identity);
     }
