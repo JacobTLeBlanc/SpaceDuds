@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Get input
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        horizontal = Input.acceleration.x;
+        vertical = Input.acceleration.y;
 
         // Check if space is pressed then fire
         if (Input.GetKeyDown(KeyCode.Space))
