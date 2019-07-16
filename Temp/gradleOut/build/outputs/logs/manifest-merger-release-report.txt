@@ -48,15 +48,15 @@ ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest
 activity#com.unity3d.player.UnityPlayerActivity
 ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:5-12:16
 	android:screenOrientation
-		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:102-140
+		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:102-138
 	android:label
 		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:69-101
 	android:launchMode
-		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:141-172
+		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:139-170
 	android:hardwareAccelerated
-		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:355-390
+		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:353-388
 	android:configChanges
-		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:173-354
+		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:171-352
 	android:name
 		ADDED from /home/thejakenator/Space Duds/Temp/gradleOut/src/main/AndroidManifest.xml:5:15-68
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER

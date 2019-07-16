@@ -20,14 +20,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get input
+        // Get input from gyroscope
         horizontal = Input.acceleration.x;
-        vertical = Input.acceleration.y;
 
-        // Check if space is pressed then fire
-        if (Input.GetKeyDown(KeyCode.Space))
+        // Check if screen is touched is pressed then fire
+        for (int i = 0; i < Input.touchCount; i++)
         {
-            Fire();
+            if(Input.GetTouch(i).phase == TouchPhase.Began)
+            {
+                Fire();
+            }
         }
     }
 
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() 
     {
         // Use input to change position 
-        Vector2 move = new Vector2(horizontal, vertical);
+        Vector2 move = new Vector2(horizontal, -3);
         Vector2 position = rb2d.position;
         position = position + move * speed * Time.deltaTime;
         rb2d.position = position;
