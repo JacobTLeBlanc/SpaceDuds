@@ -11,15 +11,21 @@ public class PlayerController : MonoBehaviour
     float horizontal; 
     float vertical;
 
-    int health;
+    int currentHealth;
+    public int health { get { return currentHealth; } }
     int maxHealth = 5;
+
+    bool isInvicible;
+    public float timeInvicible = 2.0f;
+    float invicibleTimer;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); // Get RigidBody component
 
-        health = maxHealth;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -34,6 +40,15 @@ public class PlayerController : MonoBehaviour
             if(Input.GetTouch(i).phase == TouchPhase.Began)
             {
                 Fire();
+            }
+        }
+
+        if (isInvicible)
+        {
+            invicibleTimer -= Time.deltaTime;
+            if (invicibleTimer < 0)
+            {
+                isInvicible = false;
             }
         }
     }
@@ -60,4 +75,20 @@ public class PlayerController : MonoBehaviour
         projectile.Launch(direction, 300.0f);
     }
 
+    public void ChangeHealth(int amount)
+    {
+        if (amount < 0)
+        {
+            if (isInvicible)
+            {
+                return;
+            }
+
+            isInvicible = true;
+            invicibleTimer = timeInvicible;
+        }
+
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
+    }
 }
