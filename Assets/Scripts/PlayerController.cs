@@ -11,10 +11,15 @@ public class PlayerController : MonoBehaviour
     float horizontal; 
     float vertical;
 
+    int health;
+    int maxHealth = 5;
+
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); // Get RigidBody component
+
+        health = maxHealth;
     }
 
     // Update is called once per frame
