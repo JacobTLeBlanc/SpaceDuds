@@ -35,6 +35,7 @@ public class Asteroid : MonoBehaviour
     {
         // Check if object is bullet or already destroyed asteroid
         Projectile bullet = other.gameObject.GetComponent<Projectile>();
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
         DestroyedAsteroid destroyed = gameObject.GetComponent<DestroyedAsteroid>();
 
         if (bullet != null && destroyed == null)
@@ -47,9 +48,12 @@ public class Asteroid : MonoBehaviour
             {
                 breakAsteroid();
             }
-
-            // Destroy current asteroid
-            Destroy(gameObject);
+        }
+        
+        // Damage player
+        if (player != null)
+        {
+            player.ChangeHealth(-1);
         }
     }
 
