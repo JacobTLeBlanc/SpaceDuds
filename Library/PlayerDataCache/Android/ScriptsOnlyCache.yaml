@@ -345,7 +345,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: db8274efb8379ce0622c961016d066f6
+      Hash: eef40b46e2efe9e50e4f7e2aa7f7d2a7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -988,4 +988,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /home/thejakenator/Space Duds/Builds/Android_0.1.apk
+  playerPath: /home/thejakenator/Space Duds/Builds/Android_0.11.apk
