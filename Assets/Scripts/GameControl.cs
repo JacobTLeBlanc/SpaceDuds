@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class GameControl : MonoBehaviour
     public GameObject greyBigAsteroid;
     public GameObject lightGreyAsteroid;
     public GameObject[] asteroids = new GameObject[4];
+    public Text scoreText;
+    private int score = 0;
+    float scoreTimerLength = 0.5f;
+    float scoreTimer;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,6 +33,7 @@ public class GameControl : MonoBehaviour
 
         // Start timer
         asteroidTimer = timerLength;
+        scoreTimer = scoreTimerLength;        
 
         // Add asteroids to array 
         asteroids[0] = brownAsteroid;
@@ -41,12 +47,19 @@ public class GameControl : MonoBehaviour
     {
         // Update timer
         asteroidTimer -= Time.deltaTime;
+        scoreTimer -= Time.deltaTime;
 
         // Spawn asteroid when timer ends
         if (asteroidTimer < 0)
         {
             SpawnAsteroid();
             asteroidTimer = timerLength;
+        }
+
+        if (scoreTimer < 0)
+        {
+            score++;
+            scoreText.text = score.ToString();
         }
     }
 
