@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     int currentHealth;
     public int health { get { return currentHealth; } }
-    int maxHealth = 5;
+    int maxHealth = 3;
 
     bool isInvicible;
     public float timeInvicible = 2.0f;
@@ -97,5 +97,6 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+        UIHealth.instance.updateHearts(currentHealth);
     }
 }
