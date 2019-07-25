@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - Projectile
     - Repeating
     - ScrollingObject
+    - UIHealth
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
@@ -22,6 +23,13 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -49,34 +57,56 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9252}
     - Class: 114
+      Script: {instanceID: 9354}
+    - Class: 114
+      Script: {instanceID: 9360}
+    - Class: 114
+      Script: {instanceID: 9366}
+    - Class: 114
+      Script: {instanceID: 9374}
+    - Class: 114
+      Script: {instanceID: 9410}
+    - Class: 114
+      Script: {instanceID: 9412}
+    - Class: 114
       Script: {instanceID: 9470}
     - Class: 114
-      Script: {instanceID: 9948}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 10028}
+      Script: {instanceID: 9950}
     - Class: 114
-      Script: {instanceID: 10092}
+      Script: {instanceID: 10030}
     - Class: 114
-      Script: {instanceID: 10140}
+      Script: {instanceID: 10094}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 10142}
     - Class: 114
-      Script: {instanceID: 10234}
+      Script: {instanceID: 10160}
     - Class: 114
-      Script: {instanceID: 10266}
+      Script: {instanceID: 10236}
     - Class: 114
-      Script: {instanceID: 10326}
+      Script: {instanceID: 10268}
     - Class: 114
-      Script: {instanceID: 10798}
+      Script: {instanceID: 10328}
     - Class: 114
-      Script: {instanceID: 10816}
+      Script: {instanceID: 10800}
+    - Class: 114
+      Script: {instanceID: 10818}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -105,7 +135,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 553da963357b017cafdcd7ce7cd7d867
+      Hash: 546a064bb727b8c8089e55878c4a4098
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameControl
@@ -633,6 +663,12 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: bd46a96e92ba337d11e38c09a9c4bae9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIHealth
+  - hash:
+      serializedVersion: 2
       Hash: 3c2b11a8027702f7fef4a819d8b9191a
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -988,4 +1024,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /home/thejakenator/Space Duds/Builds/Android_0.11.apk
+  playerPath: /home/thejakenator/Space Duds/Builds/Android_0.12.apk
