@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // Invicible timer when hit
         if (isInvicible)
         {
             invicibleTimer -= Time.deltaTime;
@@ -82,8 +83,10 @@ public class PlayerController : MonoBehaviour
         projectile.Launch(direction, 300.0f);
     }
 
+    // Change health 
     public void ChangeHealth(int amount)
     {
+        // If removing health, activate invicibilty
         if (amount < 0)
         {
             if (isInvicible)
@@ -95,8 +98,8 @@ public class PlayerController : MonoBehaviour
             invicibleTimer = timeInvicible;
         }
 
+        // Update health accordingly
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
         UIHealth.instance.updateHearts(currentHealth);
     }
 }

@@ -56,6 +56,7 @@ public class GameControl : MonoBehaviour
             asteroidTimer = timerLength;
         }
 
+        // Add score
         if (scoreTimer < 0)
         {
             score++;
