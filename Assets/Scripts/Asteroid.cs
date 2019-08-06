@@ -55,6 +55,8 @@ public class Asteroid : MonoBehaviour
         {
             player.ChangeHealth(-1);
         }
+
+        Destroy(gameObject);
     }
 
     void breakAsteroid()
