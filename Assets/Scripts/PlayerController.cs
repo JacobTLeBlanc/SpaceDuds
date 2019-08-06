@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour
             {
                 bulletShot = false;
             }
+
+            UIBullet.instance.SetValue((timeBullet - bulletTimer) * 1.0f/timeBullet);
         }
     }
 
