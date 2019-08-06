@@ -11,14 +11,20 @@ public class PlayerController : MonoBehaviour
     float horizontal; 
     float vertical;
 
+    // Health
     int currentHealth;
     public int health { get { return currentHealth; } }
     int maxHealth = 3;
 
+    // Invicible
     bool isInvicible;
     public float timeInvicible = 2.0f;
     float invicibleTimer;
     
+    // Bullet Delay
+    bool bulletShot;
+    public float timeBullet = 0.5f;
+    float bulletTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -32,23 +38,23 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Get input from gyroscope
-        horizontal = Input.acceleration.x;
+        // horizontal = Input.acceleration.x;
 
         // Test on computer
-        // horizontal = Input.GetAxis("Horizontal");
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //    Fire();
-        // }
+        horizontal = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+           Fire();
+        }
 
         // Check if screen is touched is pressed then fire
-        for (int i = 0; i < Input.touchCount; i++)
-        {
-            if(Input.GetTouch(i).phase == TouchPhase.Began)
-            {
-                Fire();
-            }
-        }
+        // for (int i = 0; i < Input.touchCount; i++)
+        // {
+        //     if(Input.GetTouch(i).phase == TouchPhase.Began)
+        //     {
+        //         Fire();
+        //     }
+        // }
 
         // Invicible timer when hit
         if (isInvicible)
@@ -59,13 +65,23 @@ public class PlayerController : MonoBehaviour
                 isInvicible = false;
             }
         }
+
+        // Bullet delay
+        if (bulletShot)
+        {
+            bulletTimer -= Time.deltaTime;
+            if (bulletTimer < 0)
+            {
+                bulletShot = false;
+            }
+        }
     }
 
     // Used Fixed Update to smooth movement
     void FixedUpdate() 
     {
         // Use input to change position 
-        Vector2 move = new Vector2(horizontal, -3);
+        Vector2 move = new Vector2(horizontal, 0);
         Vector2 position = rb2d.position;
         position = position + move * speed * Time.deltaTime;
         rb2d.position = position;
@@ -74,6 +90,10 @@ public class PlayerController : MonoBehaviour
     // Fire method
     void Fire()
     {
+        if (bulletShot) {
+            return;
+        } 
+
         // Create bullet object
         GameObject bulletObject = Instantiate(bulletPrefab, rb2d.position + Vector2.up * 0.5f, Quaternion.identity);
         Vector2 direction = new Vector2(0, 1);
@@ -81,6 +101,10 @@ public class PlayerController : MonoBehaviour
         // Call launch method on bullet
         Projectile projectile = bulletObject.GetComponent<Projectile>();
         projectile.Launch(direction, 300.0f);
+
+        // Activate bullet delay
+        bulletShot = true;
+        bulletTimer = timeBullet;
     }
 
     // Change health 
