@@ -16,10 +16,15 @@ public class GameControl : MonoBehaviour
     public GameObject greyBigAsteroid;
     public GameObject lightGreyAsteroid;
     public GameObject[] asteroids = new GameObject[4];
+
+    // Score
     public Text scoreText;
     private int score = 0;
     float scoreTimerLength = 0.5f;
     float scoreTimer;
+
+    // Coins
+    public GameObject coinPrefab;
 
     // Start is called before the first frame update
     void Awake()
@@ -83,5 +88,14 @@ public class GameControl : MonoBehaviour
         Vector2 vector = new Vector2(x, y);
 
         return vector;
+    }
+
+    public void spawnCoin(int chance, GameObject obj)
+    {
+        int randInt = Random.Range(0, chance);
+        if (randInt == 0)
+        {
+            Instantiate(coinPrefab, obj.transform.position, Quaternion.identity);
+        }
     }
 }
