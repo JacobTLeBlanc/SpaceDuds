@@ -6,16 +6,12 @@ using UnityEngine.UI;
 public class GameControl : MonoBehaviour
 {
     public static GameControl instance; // This instance
-    public float scrollSpeed = -3.0f; // Scroll Speed
-    float asteroidTimer; // Spawn timer of asteroid
-    public float timerLength = 0.5f; // Length of spawn timer
+    public float scrollSpeed = -2.0f; // Scroll Speed
 
-    // Asteroids to spawn
-    public GameObject brownAsteroid;
-    public GameObject greySmallAsteroid;
-    public GameObject greyBigAsteroid;
-    public GameObject lightGreyAsteroid;
-    public GameObject[] asteroids = new GameObject[4];
+    // Asteroid Clusters
+    public GameObject[] asteroids = new GameObject[1];
+    public float asteroidTimerLength = 2.0f;
+    float timerAsteroid;
 
     // Score
     public Text scoreText;
@@ -39,46 +35,39 @@ public class GameControl : MonoBehaviour
         }
 
         // Start timer
-        asteroidTimer = timerLength;
-        scoreTimer = scoreTimerLength;        
-
-        // Add asteroids to array 
-        asteroids[0] = brownAsteroid;
-        asteroids[1] = greySmallAsteroid;
-        asteroids[2] = greyBigAsteroid;
-        asteroids[3] = lightGreyAsteroid;
+        scoreTimer = scoreTimerLength;      
+        timerAsteroid = asteroidTimerLength;  
     }
 
     // Update is called once per frame
     void Update()
     {
         // Update timer
-        asteroidTimer -= Time.deltaTime;
         scoreTimer -= Time.deltaTime;
-
-        // Spawn asteroid when timer ends
-        if (asteroidTimer < 0)
-        {
-            SpawnAsteroid();
-            asteroidTimer = timerLength;
-        }
+        timerAsteroid -= Time.deltaTime;
 
         // Add score
         if (scoreTimer < 0)
         {
             score++;
             scoreText.text = score.ToString();
+            scoreTimer = scoreTimerLength;
+        }
+
+        if (timerAsteroid < 0)
+        {
+            SpawnAsteroid();
+            timerAsteroid = asteroidTimerLength;
         }
     }
 
     // Spawn asteroid
     void SpawnAsteroid()
     {
-        int randAsteroid = Random.Range(0, 4); // Pick asteroid
-        float randXPos = Random.Range(-15.0f, 15.0f); // Pick pos
+        int randAsteroid = 0; // Pick asteroid
 
         // Create new game object with random X pos
-        Vector2 position = new Vector2(randXPos, 10);
+        Vector2 position = new Vector2(0, 8);
         Instantiate(asteroids[randAsteroid], position, Quaternion.identity);
     }
 

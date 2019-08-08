@@ -34,22 +34,8 @@ public class Asteroid : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         // Check if object is bullet or already destroyed asteroid
-        Projectile bullet = other.gameObject.GetComponent<Projectile>();
         PlayerController player = other.gameObject.GetComponent<PlayerController>();
-        DestroyedAsteroid destroyed = gameObject.GetComponent<DestroyedAsteroid>();
 
-        if (bullet != null && destroyed == null)
-        {
-            // Turn astroid into 1-3 pieces
-            int Rand = Random.Range(1, 4);
-
-            // Create new asteroids
-            for (int i = 0; i < Rand; i++)
-            {
-                breakAsteroid();
-            }
-        }
-        
         // Damage player
         if (player != null)
         {
@@ -57,20 +43,5 @@ public class Asteroid : MonoBehaviour
         }
 
         Destroy(gameObject);
-    }
-
-    void breakAsteroid()
-    {
-        // Create new asteroid
-        GameObject newAst = Instantiate(gameObject, this.transform.position, Quaternion.identity);
-
-        // Scale down new asteroids
-        newAst.transform.localScale = this.transform.localScale * Random.Range(0.3f, 0.8f);
-
-        // Add destroyedAsteroid script
-        newAst.AddComponent<DestroyedAsteroid>();
-
-        // Spawn coin
-        GameControl.instance.spawnCoin(5, this.transform.position);
     }
 }
