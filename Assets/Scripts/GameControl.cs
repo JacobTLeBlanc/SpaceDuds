@@ -25,6 +25,8 @@ public class GameControl : MonoBehaviour
 
     // Coins
     public GameObject coinPrefab;
+    public Text coinAmount;
+    private int coins = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -97,5 +99,11 @@ public class GameControl : MonoBehaviour
         {
             Instantiate(coinPrefab, position, Quaternion.identity);
         }
+    }
+
+    public void addCoin()
+    {
+        coins++;
+        coinAmount.text = coins.ToString();
     }
 }
