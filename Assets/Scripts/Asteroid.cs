@@ -69,8 +69,8 @@ public class Asteroid : MonoBehaviour
 
         // Add destroyedAsteroid script
         newAst.AddComponent<DestroyedAsteroid>();
+
+        // Spawn coin
+        GameControl.instance.spawnCoin(5, this.transform.position);
     }
-
-    
-
 }

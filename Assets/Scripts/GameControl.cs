@@ -90,12 +90,12 @@ public class GameControl : MonoBehaviour
         return vector;
     }
 
-    public void spawnCoin(int chance, GameObject obj)
+    public void spawnCoin(int chance, Vector3 position)
     {
         int randInt = Random.Range(0, chance);
         if (randInt == 0)
         {
-            Instantiate(coinPrefab, obj.transform.position, Quaternion.identity);
+            Instantiate(coinPrefab, position, Quaternion.identity);
         }
     }
 }
