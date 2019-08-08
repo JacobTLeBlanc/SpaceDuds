@@ -7,7 +7,7 @@ public class Asteroid : MonoBehaviour
     Rigidbody2D rb2d;
 
     // Timer Length
-    public float timerLength = 5.0f;
+    public float timerLength = 10.0f;
     float destroyTimer = 0.0f; // Timer
     
 
