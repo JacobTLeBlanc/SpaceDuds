@@ -564,10 +564,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfef48a013b3e7756af31ad810b0dffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: -3
+  scrollSpeed: -2
   asteroids:
   - {fileID: 3971699613721847934, guid: 248f6b3db9858058e8a4db5e32d47307, type: 3}
-  asteroidTimerLength: 2
+  - {fileID: 700047172489125179, guid: f1a4f9c86d4a3f202a40e015513b64e9, type: 3}
+  - {fileID: 6919538975920862787, guid: ca3281af5a6143bacba69f29b7d08f5a, type: 3}
+  asteroidTimerLength: 4
   scoreText: {fileID: 924782385}
   coinPrefab: {fileID: 235954932001228568, guid: ac2b3d71996db0b139269c71fa78632a,
     type: 3}

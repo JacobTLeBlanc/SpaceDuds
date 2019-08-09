@@ -9,7 +9,7 @@ public class GameControl : MonoBehaviour
     public float scrollSpeed = -2.0f; // Scroll Speed
 
     // Asteroid Clusters
-    public GameObject[] asteroids = new GameObject[1];
+    public GameObject[] asteroids = new GameObject[3];
     public float asteroidTimerLength = 2.0f;
     float timerAsteroid;
 
@@ -64,7 +64,7 @@ public class GameControl : MonoBehaviour
     // Spawn asteroid
     void SpawnAsteroid()
     {
-        int randAsteroid = 0; // Pick asteroid
+        int randAsteroid = Random.Range(0, asteroids.Length); // Pick asteroid
 
         // Create new game object with random X pos
         Vector2 position = new Vector2(0, 8);
