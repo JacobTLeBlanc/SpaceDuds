@@ -9,7 +9,7 @@ public class GameControl : MonoBehaviour
     public float scrollSpeed = -2.0f; // Scroll Speed
 
     // Asteroid Clusters
-    public GameObject[] asteroids = new GameObject[3];
+    public GameObject[] asteroids = new GameObject[4];
     public float asteroidTimerLength = 2.0f;
     float timerAsteroid;
 
@@ -64,11 +64,21 @@ public class GameControl : MonoBehaviour
     // Spawn asteroid
     void SpawnAsteroid()
     {
+        int isFlipped = Random.Range(0, 2);
+        int rotation = 0;
+
+        if (isFlipped == 0) 
+        {
+            rotation = 180;
+        }
+
+        Quaternion quatRotation = new Quaternion(0, rotation, 0 , 0);
+
         int randAsteroid = Random.Range(0, asteroids.Length); // Pick asteroid
 
         // Create new game object with random X pos
         Vector2 position = new Vector2(0, 8);
-        Instantiate(asteroids[randAsteroid], position, Quaternion.identity);
+        Instantiate(asteroids[randAsteroid], position, quatRotation);
     }
 
     // Generate Random Vector2
