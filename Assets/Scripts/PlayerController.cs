@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     bool isInvicible;
     public float timeInvicible = 2.0f;
     float invicibleTimer;
+    float invicibilityFlashTimer;
+    float flashLength = 0.1f;
+    bool spriteRender = true;
     
     // Bullet Delay
     bool bulletShot;
@@ -59,10 +62,28 @@ public class PlayerController : MonoBehaviour
         // Invicible timer when hit
         if (isInvicible)
         {
+            invicibilityFlashTimer -= Time.deltaTime;
             invicibleTimer -= Time.deltaTime;
+
             if (invicibleTimer < 0)
             {
                 isInvicible = false;
+                gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            }
+
+            if (invicibilityFlashTimer < 0)
+            {
+                if (spriteRender)
+                {
+                    gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                    spriteRender = false;
+                } 
+                else
+                {
+                    gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    spriteRender = true;
+                }
+                invicibilityFlashTimer = flashLength;
             }
         }
 
@@ -122,6 +143,7 @@ public class PlayerController : MonoBehaviour
 
             isInvicible = true;
             invicibleTimer = timeInvicible;
+            invicibilityFlashTimer = flashLength;
         }
 
         // Update health accordingly
