@@ -9,7 +9,7 @@ public class GameControl : MonoBehaviour
     public float scrollSpeed = -2.0f; // Scroll Speed
 
     // Asteroid Clusters
-    public GameObject[] asteroids = new GameObject[4];
+    public GameObject[] asteroids = new GameObject[5];
     public float asteroidTimerLength = 2.0f;
     float timerAsteroid;
 

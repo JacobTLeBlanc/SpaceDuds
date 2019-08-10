@@ -570,6 +570,7 @@ MonoBehaviour:
   - {fileID: 700047172489125179, guid: f1a4f9c86d4a3f202a40e015513b64e9, type: 3}
   - {fileID: 6919538975920862787, guid: ca3281af5a6143bacba69f29b7d08f5a, type: 3}
   - {fileID: 5870235782212906874, guid: 9749f3639341899a2a3138d38b0910b9, type: 3}
+  - {fileID: 7806013771793829684, guid: 2c0359b3dcc4900b1bdc11c06b62e55d, type: 3}
   asteroidTimerLength: 4
   scoreText: {fileID: 924782385}
   coinPrefab: {fileID: 235954932001228568, guid: ac2b3d71996db0b139269c71fa78632a,
