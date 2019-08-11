@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 452500951}
   - component: {fileID: 452500954}
   - component: {fileID: 452500953}
+  - component: {fileID: 452500955}
   m_Layer: 0
   m_Name: BossAlienShip
   m_TagString: Untagged
@@ -708,7 +709,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -717,6 +718,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &452500955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452500950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d80207ffc896619f8b189c9d7ebecc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.2
+  xLength: 10
+  yLength: 2
 --- !u!1 &494391369
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfef48a013b3e7756af31ad810b0dffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: -2
+  scrollSpeed: 0
   asteroids:
   - {fileID: 3971699613721847934, guid: 248f6b3db9858058e8a4db5e32d47307, type: 3}
   - {fileID: 700047172489125179, guid: f1a4f9c86d4a3f202a40e015513b64e9, type: 3}
