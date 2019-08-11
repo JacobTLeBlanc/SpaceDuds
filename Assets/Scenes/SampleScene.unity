@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 452500954}
   - component: {fileID: 452500953}
   - component: {fileID: 452500955}
+  - component: {fileID: 452500956}
   m_Layer: 14
   m_Name: BossAlienShip
   m_TagString: Untagged
@@ -733,6 +734,21 @@ MonoBehaviour:
   moveSpeed: -0.1
   xLength: 6
   yLength: 4
+--- !u!114 &452500956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452500950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd5f6bc06c14b44d826187307ea2308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossBullet: {fileID: 3176977145144008911, guid: d24d953680858b30c97b7578c388a5a1,
+    type: 3}
+  force: 0.01
 --- !u!1 &494391369
 GameObject:
   m_ObjectHideFlags: 0
