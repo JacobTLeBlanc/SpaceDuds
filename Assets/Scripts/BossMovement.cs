@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossMovement : MonoBehaviour
 {
-    public float moveSpeed = 1.0f;
+    public float moveSpeed = -1.0f;
     float yTimer;
     float xTimer;
     public float xLength;
@@ -21,7 +21,7 @@ public class BossMovement : MonoBehaviour
         xTimer = xLength;
         yTimer = yLength;
 
-        horizontal = moveSpeed;
+        horizontal = moveSpeed * 2.5f;
         vertical = moveSpeed;
 
         rb2d = GetComponent<Rigidbody2D>();
@@ -35,22 +35,18 @@ public class BossMovement : MonoBehaviour
 
         if (xTimer < 0)
         {
-            xTimer = xLength;
-            horizontal *= -1;
+            xTimer = xLength * 2;
+            horizontal *= -1.0f;
         }
 
         if (yTimer < 0)
         {
-            yTimer = yLength;
-            vertical *= -1;
+            yTimer = yLength * 2;
+            vertical *= -1.0f;
         }
 
-    }
-
-    void FixedUpdate()
-    {
-        Vector2 move = new Vector2(horizontal, vertical);
-        Vector2 position = rb2d.position;
+        Vector3 move = new Vector3(horizontal, vertical, 0);
+        Vector3 position = rb2d.position;
         position = position + move * Time.deltaTime;
         rb2d.position = position;
     }
