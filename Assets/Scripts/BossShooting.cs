@@ -26,13 +26,16 @@ public class BossShooting : MonoBehaviour
 
         if (timer < 0)
         {
-            switch(count % 2)
+            switch(count % 3)
             {
                 case 0:
                     firstAttack();
                     break;
                 case 1:
                     secondAttack();
+                    break;
+                case 2:
+                    thirdAttack();
                     break;
             }
 
@@ -54,7 +57,7 @@ public class BossShooting : MonoBehaviour
         Vector2 direction = new Vector2 (0.5f, -0.5f);
         float rotZ = 45.0f;
 
-        for (int i = 0; i < 6; i++) 
+        for (int i = 0; i < 5; i++) 
         {
             Fire(direction, force, rotZ);
             direction.x -= 0.1f;
@@ -68,12 +71,37 @@ public class BossShooting : MonoBehaviour
         Vector2 direction = new Vector2 (-0.5f, -0.5f);
         float rotZ = -45.0f;
 
-        for (int i = 0; i < 6; i++) 
+        for (int i = 0; i < 5; i++) 
         {
             Fire(direction, force, rotZ);
             direction.x += 0.1f;
             direction.y -= 0.1f;
             rotZ += 9.0f;    
+        }
+    }
+
+    void thirdAttack()
+    {
+        Vector2 direction = new Vector2 (-0.5f, -0.5f);
+        float rotZ = -45.0f;
+
+        for (int i = 0; i < 2; i++)
+        {
+            Fire(direction, force, rotZ);
+            direction.x += 0.25f;
+            direction.y -= 0.25f;
+            rotZ += 22.5f;
+        }
+
+        direction = new Vector2(0.5f, -0.5f);
+        rotZ = 45.0f;
+
+        for (int i = 0; i < 2; i++)
+        {
+            Fire(direction, force, rotZ);
+            direction.x -= 0.25f;
+            direction.y -= 0.25f;
+            rotZ -= 22.5f;
         }
     }
 }
