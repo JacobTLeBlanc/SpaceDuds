@@ -512,6 +512,7 @@ GameObject:
   - component: {fileID: 452500953}
   - component: {fileID: 452500955}
   - component: {fileID: 452500956}
+  - component: {fileID: 452500957}
   m_Layer: 14
   m_Name: BossAlienShip
   m_TagString: Untagged
@@ -706,11 +707,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452500950}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -750,6 +751,18 @@ MonoBehaviour:
     type: 3}
   force: 0.01
   timerLength: 2
+--- !u!114 &452500957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452500950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f27259a962d95a9b16c4b934f8dcd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &494391369
 GameObject:
   m_ObjectHideFlags: 0
