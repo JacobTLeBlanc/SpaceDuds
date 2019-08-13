@@ -56,9 +56,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Asteroid.cs" />
-     <Compile Include="Assets\Scripts\BossHealth.cs" />
-     <Compile Include="Assets\Scripts\BossMovement.cs" />
-     <Compile Include="Assets\Scripts\BossShooting.cs" />
+     <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
+     <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
+     <Compile Include="Assets\Scripts\Boss\BossProjectile.cs" />
+     <Compile Include="Assets\Scripts\Boss\BossShooting.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\Scripts\DestroyedAsteroid.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
