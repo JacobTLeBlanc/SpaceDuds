@@ -749,6 +749,7 @@ MonoBehaviour:
   bossBullet: {fileID: 3176977145144008911, guid: d24d953680858b30c97b7578c388a5a1,
     type: 3}
   force: 0.01
+  timerLength: 2
 --- !u!1 &494391369
 GameObject:
   m_ObjectHideFlags: 0

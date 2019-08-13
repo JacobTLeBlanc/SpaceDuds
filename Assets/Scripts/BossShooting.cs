@@ -6,35 +6,74 @@ public class BossShooting : MonoBehaviour
 {
     public GameObject bossBullet;
     public float force;
-    bool timerOn;
-    float timerLength = 0.1f;
+    public float timerLength = 0.1f;
     float timer;
     Rigidbody2D rb2d;
     Rigidbody2D rb2dBullet;
+    int count = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        firstAttack();
+        timer = timerLength;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
 
+        if (timer < 0)
+        {
+            switch(count % 2)
+            {
+                case 0:
+                    firstAttack();
+                    break;
+                case 1:
+                    secondAttack();
+                    break;
+            }
+
+            count++;
+            timer = timerLength;
+        }
     }
 
-    void Fire(Vector2 direction, float force)
+    void Fire(Vector2 direction, float force, float rotationZ)
     {
         GameObject bullet = Instantiate(bossBullet, rb2d.position + Vector2.down * 2.3f, Quaternion.identity);
         rb2dBullet = bullet.GetComponent<Rigidbody2D>();
+        bullet.transform.Rotate(0, 0, rotationZ);
         rb2dBullet.AddForce(direction * force);
     }
 
     void firstAttack()
     {
-        Vector2 direction = new Vector2 (0, -1);
-        Fire(direction, force);
+        Vector2 direction = new Vector2 (0.5f, -0.5f);
+        float rotZ = 45.0f;
+
+        for (int i = 0; i < 6; i++) 
+        {
+            Fire(direction, force, rotZ);
+            direction.x -= 0.1f;
+            direction.y -= 0.1f;
+            rotZ -= 9.0f;    
+        }
+    }
+
+    void secondAttack()
+    {
+        Vector2 direction = new Vector2 (-0.5f, -0.5f);
+        float rotZ = -45.0f;
+
+        for (int i = 0; i < 6; i++) 
+        {
+            Fire(direction, force, rotZ);
+            direction.x += 0.1f;
+            direction.y -= 0.1f;
+            rotZ += 9.0f;    
+        }
     }
 }
