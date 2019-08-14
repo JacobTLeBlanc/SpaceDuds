@@ -47,7 +47,6 @@ public class BossHealth : MonoBehaviour
             {
                 GameControl.instance.bossBattle = false;
                 GameControl.instance.bossSpawn = false;
-                GameControl.instance.scrollSpeed = -2.0f;
                 Destroy(gameObject);
             }
         }

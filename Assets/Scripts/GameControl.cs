@@ -82,7 +82,7 @@ public class GameControl : MonoBehaviour
 
             if (bossDelay < 0 && !bossSpawn)
             {
-                Instantiate(boss, gameObject.transform.position + Vector3.up * 5, rotateZ);
+                Instantiate(boss, gameObject.transform.position + Vector3.up * 3, rotateZ);
                 bossSpawn = true;
             }
         }

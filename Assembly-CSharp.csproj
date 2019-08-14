@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Boss\BossProjectile.cs" />
      <Compile Include="Assets\Scripts\Boss\BossShooting.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
+     <Compile Include="Assets\Scripts\Despawn.cs" />
      <Compile Include="Assets\Scripts\DestroyedAsteroid.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
