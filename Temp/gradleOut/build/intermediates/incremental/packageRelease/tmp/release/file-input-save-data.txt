@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Aug 14 19:05:20 ADT 2019
+#Wed Aug 14 19:12:14 ADT 2019
 124.path=bin/Data/Managed/UnityEngine.ScreenCaptureModule.dll
 60.set=ASSET
 52.set=ASSET

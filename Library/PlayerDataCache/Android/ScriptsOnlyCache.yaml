@@ -1098,4 +1098,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /home/thejakenator/Space Duds/Builds/Android_0.2.apk
+  playerPath: /home/thejakenator/Space Duds/Builds/Android_0.21.apk
