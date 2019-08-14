@@ -62,17 +62,20 @@ public class GameControl : MonoBehaviour
             scoreTimer = scoreTimerLength;
         }
 
+        // Timer for asteroid clusters spawns
         if (timerAsteroid < 0 && !bossBattle)
         {
             SpawnAsteroid();
             timerAsteroid = asteroidTimerLength;
         }
 
+        // Check if score is divisible by 100
         if (score % 100 == 0 && score != 0)
         {
             bossBattle = true;
         }
 
+        // Spawn boss after delay
         if (bossBattle)
         {
             bossDelay -= Time.deltaTime;
@@ -88,6 +91,7 @@ public class GameControl : MonoBehaviour
     // Spawn asteroid
     void SpawnAsteroid()
     {
+        // Randomize if flipped or not
         int isFlipped = Random.Range(0, 2);
         int rotation = 0;
 
@@ -115,6 +119,7 @@ public class GameControl : MonoBehaviour
         return vector;
     }
 
+    // Spawn a coin with a given chance
     public void spawnCoin(int chance, Vector3 position)
     {
         int randInt = Random.Range(0, chance);
@@ -124,6 +129,7 @@ public class GameControl : MonoBehaviour
         }
     }
 
+    // Add coin to counter
     public void addCoin()
     {
         coins++;
