@@ -24,6 +24,13 @@ public class GameControl : MonoBehaviour
     public Text coinAmount;
     private int coins = 0;
 
+    // Boss
+    public GameObject boss;
+    public bool bossBattle = false;
+    public bool bossSpawn = false;
+    float bossDelay;
+    Quaternion rotateZ = new Quaternion(0, 0, -180, 0);
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,6 +44,7 @@ public class GameControl : MonoBehaviour
         // Start timer
         scoreTimer = scoreTimerLength;      
         timerAsteroid = asteroidTimerLength;  
+        bossDelay = asteroidTimerLength;
     }
 
     // Update is called once per frame
@@ -47,17 +55,33 @@ public class GameControl : MonoBehaviour
         timerAsteroid -= Time.deltaTime;
 
         // Add score
-        if (scoreTimer < 0)
+        if (scoreTimer < 0 && !bossBattle)
         {
             score++;
             scoreText.text = score.ToString();
             scoreTimer = scoreTimerLength;
         }
 
-        if (timerAsteroid < 0)
+        if (timerAsteroid < 0 && !bossBattle)
         {
             SpawnAsteroid();
             timerAsteroid = asteroidTimerLength;
+        }
+
+        if (score % 100 == 0 && score != 0)
+        {
+            bossBattle = true;
+        }
+
+        if (bossBattle)
+        {
+            bossDelay -= Time.deltaTime;
+
+            if (bossDelay < 0 && !bossSpawn)
+            {
+                Instantiate(boss, gameObject.transform.position + Vector3.up * 5, rotateZ);
+                bossSpawn = true;
+            }
         }
     }
 
