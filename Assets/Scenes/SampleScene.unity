@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfef48a013b3e7756af31ad810b0dffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0
+  scrollSpeed: -2
   asteroids:
   - {fileID: 3971699613721847934, guid: 248f6b3db9858058e8a4db5e32d47307, type: 3}
   - {fileID: 700047172489125179, guid: f1a4f9c86d4a3f202a40e015513b64e9, type: 3}
