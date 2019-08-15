@@ -1,4 +1,0 @@
-#Wed Aug 14 19:12:13 ADT 2019
-base.0=/home/thejakenator/Space Duds/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex

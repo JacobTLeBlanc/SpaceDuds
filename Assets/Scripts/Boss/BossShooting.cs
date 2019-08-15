@@ -11,6 +11,7 @@ public class BossShooting : MonoBehaviour
     Rigidbody2D rb2d;
     Rigidbody2D rb2dBullet;
     int count = 0;
+    public float distance;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +47,7 @@ public class BossShooting : MonoBehaviour
 
     void Fire(Vector2 direction, float force, float rotationZ)
     {
-        GameObject bullet = Instantiate(bossBullet, rb2d.position + Vector2.down * 2.3f, Quaternion.identity);
+        GameObject bullet = Instantiate(bossBullet, rb2d.position + Vector2.down * distance, Quaternion.identity);
         rb2dBullet = bullet.GetComponent<Rigidbody2D>();
         bullet.transform.Rotate(0, 0, rotationZ);
         rb2dBullet.AddForce(direction * force);
