@@ -178,3 +178,4 @@ MonoBehaviour:
   force: 0.01
   timerLength: 2
   distance: 0
+  bossAttackCycle: 1
