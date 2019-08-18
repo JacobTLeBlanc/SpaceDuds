@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7796964433669431453, guid: e9167e47fde6074e7bf52412f450cb11,
         type: 3}
       propertyPath: m_Name
-      value: bossBullet2
+      value: bossBullet2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7796964433669431451, guid: e9167e47fde6074e7bf52412f450cb11,
         type: 3}
@@ -67,12 +67,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7796964433669431452, guid: e9167e47fde6074e7bf52412f450cb11,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: baa063fdd65ae33aba39332d6659a49c,
-        type: 3}
     - target: {fileID: 2700656407250793422, guid: e9167e47fde6074e7bf52412f450cb11,
         type: 3}
       propertyPath: m_Offset.x
@@ -98,5 +92,11 @@ PrefabInstance:
       propertyPath: m_UsedByComposite
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7796964433669431452, guid: e9167e47fde6074e7bf52412f450cb11,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: baa063fdd65ae33aba39332d6659a49c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9167e47fde6074e7bf52412f450cb11, type: 3}
