@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
-
+    // Health
     int health = 10;
 
+    // When boss is hit
     bool isHit;
     float hitTimer;
     float hitLength = 0.1f;
@@ -14,12 +15,14 @@ public class BossHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Start timer
         hitTimer = hitLength;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // When hit flash red
         if (isHit)
         {
             hitTimer -= Time.deltaTime;
@@ -36,13 +39,16 @@ public class BossHealth : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        // Get bullet
         Projectile bullet = other.gameObject.GetComponent<Projectile>();
 
+        // When hit by bullet reduce health and flash red
         if (bullet != null)
         {
             health--;
             isHit = true;
 
+            // If dead, continue game and destroy boss
             if (health == 0)
             {
                 GameControl.instance.bossBattle = false;
