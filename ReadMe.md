@@ -5,9 +5,13 @@ List of things to add:
 	[ ] Shop
 	[ ] Atleast 20 Asteroid Clusters [4 / 20]
 	[ ] Ads
-	[ ] 10 bosses [3 / 10]
+	[x] 3 bosses [3 / 3]
 	[ ] Scaled difficulty
 	[ ] Bosses have unique attacks
+	[ ] Power-Ups
+		[ ] Hearts
+		[ ] Triple Shot
+		[ ] Speed Shot
 
 List of bugs:
 
