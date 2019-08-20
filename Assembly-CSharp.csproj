@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Despawn.cs" />
      <Compile Include="Assets\Scripts\DestroyedAsteroid.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
+     <Compile Include="Assets\Scripts\HeartPowerUp.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Repeating.cs" />
