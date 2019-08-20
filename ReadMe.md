@@ -7,7 +7,7 @@ List of things to add:
 	[ ] Ads
 	[x] 3 bosses [3 / 3]
 	[ ] Scaled difficulty
-	[ ] Bosses have unique attacks
+	[x] Bosses have unique attacks
 	[ ] Power-Ups
 		[ ] Hearts
 		[ ] Triple Shot
