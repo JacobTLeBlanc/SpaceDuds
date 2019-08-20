@@ -26,6 +26,7 @@ public class GameControl : MonoBehaviour
 
     // Boss
     public GameObject[] bosses;
+    int currentBoss = 0;
     public bool bossBattle = false;
     public bool bossSpawn = false;
     float bossDelay;
@@ -82,9 +83,9 @@ public class GameControl : MonoBehaviour
 
             if (bossDelay < 0 && !bossSpawn)
             {
-                int bossNum = Random.Range(0, bosses.Length);
-                Instantiate(bosses[bossNum], gameObject.transform.position + Vector3.up * 4, rotateZ);
+                Instantiate(bosses[currentBoss % bosses.Length], gameObject.transform.position + Vector3.up * 4, rotateZ);
                 bossSpawn = true;
+                currentBoss++;
             }
         }
     }
