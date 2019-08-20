@@ -9,7 +9,7 @@ List of things to add:
 	[ ] Scaled difficulty
 	[x] Bosses have unique attacks
 	[ ] Power-Ups
-		[ ] Hearts
+		[x] Hearts
 		[ ] Triple Shot
 		[ ] Speed Shot
 
