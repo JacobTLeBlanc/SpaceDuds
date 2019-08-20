@@ -61,22 +61,14 @@ public class BossShooting : MonoBehaviour
                         thirdAttack();
                         break;
                 }
-            } else if (bossAttackCycle == 1)
+            } 
+            else if (bossAttackCycle == 1)
             {
-                switch(count % 3)
-                {
-                    case 0:
-                        ufoAttack(count);
-                        break;
-
-                    case 1:
-                        ufoAttack(count);
-                        break;
-                    
-                    case 2:
-                        ufoAttack(count);
-                        break;
-                }
+                ufoAttack(count);
+            }
+            else if (bossAttackCycle == 2) 
+            {
+                smallBossAttack(count);
             }
 
             // Update count and timer
@@ -209,6 +201,56 @@ public class BossShooting : MonoBehaviour
                 rotZ = -22.5f;
 
                 // Fire bullet
+                Fire(direction, force, rotZ);
+                break;
+        }
+    }
+
+    // Small boss attack
+    void smallBossAttack(int count)
+    {
+        // Direction and rotation
+        Vector2 direction;
+        float rotZ;
+
+        // Cycle through all attacks
+        switch(count % 9)
+        {
+            case 0:
+            case 8:
+                direction = new Vector2(0.5f, -1f);
+                rotZ = 45.0f;
+                Fire(direction, force, rotZ);
+                break;
+
+            case 1:
+            case 7:
+                direction = new Vector2(0.25f, -1f);
+                rotZ = 22.5f;
+                Fire(direction, force, rotZ);
+                break;
+
+            case 2:
+            case 6:
+                direction = new Vector2(0.25f, -1f);
+                rotZ = 22.5f;
+                Fire(direction, force, rotZ);
+
+                direction.x = -direction.x;
+                rotZ = -rotZ;
+                Fire(direction, force, rotZ);
+                break;
+            
+            case 3:
+            case 5:
+                direction = new Vector2(-0.25f, -1f);
+                rotZ = -22.5f;
+                Fire(direction, force, rotZ);
+                break;
+
+            case 4:
+                direction = new Vector2(-0.5f, -1f);
+                rotZ = -45.0f;
                 Fire(direction, force, rotZ);
                 break;
         }

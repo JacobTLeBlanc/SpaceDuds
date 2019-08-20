@@ -139,8 +139,9 @@ MonoBehaviour:
   bossBullet: {fileID: 7796964433669431453, guid: e9167e47fde6074e7bf52412f450cb11,
     type: 3}
   force: 0.01
-  timerLength: 2
+  timerLength: 0.75
   distance: 2.2
+  bossAttackCycle: 2
 --- !u!50 &8815057062405278248
 Rigidbody2D:
   serializedVersion: 4
