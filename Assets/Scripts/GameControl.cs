@@ -24,6 +24,9 @@ public class GameControl : MonoBehaviour
     public Text coinAmount;
     private int coins = 0;
 
+    // Heart PowerUp
+    public GameObject heartPrefab;
+
     // Boss
     public GameObject[] bosses;
     int currentBoss = 0;
@@ -136,5 +139,15 @@ public class GameControl : MonoBehaviour
     {
         coins++;
         coinAmount.text = coins.ToString();
+    }
+
+    public void spawnHeart(int chance, Vector3 position)
+    {
+        int randInt = Random.Range(0, chance);
+
+        if (randInt == 0)
+        {
+            Instantiate(heartPrefab, position, Quaternion.identity);
+        }
     }
 }

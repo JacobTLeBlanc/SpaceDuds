@@ -42,6 +42,11 @@ public class Asteroid : MonoBehaviour
             player.ChangeHealth(-1);
         }
 
+        // Random spawns
+        GameControl.instance.spawnCoin(5, this.transform.position);
+        GameControl.instance.spawnHeart(15, this.transform.position);
+
+        // Destroy asteroid
         Destroy(gameObject);
     }
 }

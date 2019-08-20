@@ -576,6 +576,8 @@ MonoBehaviour:
   coinPrefab: {fileID: 235954932001228568, guid: ac2b3d71996db0b139269c71fa78632a,
     type: 3}
   coinAmount: {fileID: 1922549483}
+  heartPrefab: {fileID: 8519233766438213997, guid: 3039ac9d201af7dc38c4954a6bfc77b8,
+    type: 3}
   bosses:
   - {fileID: 2982299558667615629, guid: 73e0343d3fc81382793d693a20074ba7, type: 3}
   - {fileID: 4356493810143160169, guid: f3701bf8a6258b22d9dea841fcef5f0d, type: 3}
