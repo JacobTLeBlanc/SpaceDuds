@@ -173,9 +173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd5f6bc06c14b44d826187307ea2308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossBullet: {fileID: 3176977145144008911, guid: d24d953680858b30c97b7578c388a5a1,
+  bossBullet: {fileID: 903452989320522746, guid: 3a5ff7f86d96ccbc9900c07a472c13a9,
     type: 3}
   force: 0.01
-  timerLength: 2
+  timerLength: 0.5
   distance: 0
   bossAttackCycle: 1
