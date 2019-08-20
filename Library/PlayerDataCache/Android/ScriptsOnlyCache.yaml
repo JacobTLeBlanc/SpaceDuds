@@ -167,7 +167,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: a8ba35035bfe8ad868a9ec3d38a1166b
+      Hash: f35ba003837ca30349daeec7937ae0e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameControl
@@ -1013,7 +1013,7 @@ ScriptsOnlyBuild:
     className: CinemachineHardLookAt
   - hash:
       serializedVersion: 2
-      Hash: a8fc3efd299c847e55a2aeec26bf4d78
+      Hash: 4a28f80696ba0955387eab8c09511610
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossShooting
@@ -1098,4 +1098,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /home/thejakenator/Space Duds/Builds/Android_0.21.apk
+  playerPath: /home/thejakenator/Space Duds/Builds/Android_0.3.apk

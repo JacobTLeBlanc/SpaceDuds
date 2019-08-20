@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd5f6bc06c14b44d826187307ea2308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossBullet: {fileID: 7796964433669431453, guid: e9167e47fde6074e7bf52412f450cb11,
+  bossBullet: {fileID: 7073592743480798054, guid: a3b0af9a1baec8c058b37841a291a4c7,
     type: 3}
   force: 0.01
   timerLength: 0.75
