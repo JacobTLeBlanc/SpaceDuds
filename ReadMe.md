@@ -6,7 +6,7 @@ List of things to add:
 	[ ] Atleast 20 Asteroid Clusters [4 / 20]
 	[ ] Ads
 	[x] 3 bosses [3 / 3]
-	[ ] Scaled difficulty
+	[x] Scaled difficulty
 	[x] Bosses have unique attacks
 	[ ] Power-Ups
 		[x] Hearts
