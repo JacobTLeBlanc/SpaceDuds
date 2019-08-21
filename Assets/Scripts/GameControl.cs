@@ -35,6 +35,9 @@ public class GameControl : MonoBehaviour
     float bossDelay;
     Quaternion rotateZ = new Quaternion(0, 0, -180, 0);
 
+    // Difficulty
+    public float difficultyScale = 1.0f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -77,6 +80,7 @@ public class GameControl : MonoBehaviour
         if (score % 100 == 0 && score != 0)
         {
             bossBattle = true;
+            scrollSpeed = 0.0f;
         }
 
         // Spawn boss after delay

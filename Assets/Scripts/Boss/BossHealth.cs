@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossHealth : MonoBehaviour
 {
     // Health
-    int health = 10;
+    int health = 10 * ((int) GameControl.instance.difficultyScale / 2);
 
     // When boss is hit
     bool isHit;
@@ -53,6 +53,8 @@ public class BossHealth : MonoBehaviour
             {
                 GameControl.instance.bossBattle = false;
                 GameControl.instance.bossSpawn = false;
+                GameControl.instance.difficultyScale += 1.0f;
+                GameControl.instance.scrollSpeed = -2.0f * ((GameControl.instance.difficultyScale / 100) + 1.0f);
                 Destroy(gameObject);
             }
         }

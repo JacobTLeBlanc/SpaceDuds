@@ -35,6 +35,9 @@ public class BossShooting : MonoBehaviour
 
         // Start timer
         timer = timerLength;
+
+        // Difficulty scale
+        force *= (GameControl.instance.difficultyScale / 100) + 1.0f;
     }
 
     // Update is called once per frame
