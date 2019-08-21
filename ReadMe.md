@@ -10,7 +10,7 @@ List of things to add:
 	[x] Bosses have unique attacks
 	[ ] Power-Ups
 		[x] Hearts
-		[ ] Triple Shot
+		[x] Triple Shot
 		[ ] Speed Shot
 
 List of bugs:
