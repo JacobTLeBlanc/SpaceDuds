@@ -578,12 +578,15 @@ MonoBehaviour:
   coinAmount: {fileID: 1922549483}
   heartPrefab: {fileID: 8519233766438213997, guid: 3039ac9d201af7dc38c4954a6bfc77b8,
     type: 3}
+  triplePrefab: {fileID: 4680313290512597760, guid: 5dc521afcb5d5f4e7a9b2ec1b866bb4f,
+    type: 3}
   bosses:
   - {fileID: 2982299558667615629, guid: 73e0343d3fc81382793d693a20074ba7, type: 3}
   - {fileID: 4356493810143160169, guid: f3701bf8a6258b22d9dea841fcef5f0d, type: 3}
   - {fileID: 8815057062405278256, guid: 20cfe399c8d280ad3b02880eba79631d, type: 3}
   bossBattle: 0
   bossSpawn: 0
+  difficultyScale: 1
 --- !u!4 &618708316
 Transform:
   m_ObjectHideFlags: 0
@@ -2175,6 +2178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898758449164327000, guid: 62336cc62174d744b97bb807da9751c7,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62336cc62174d744b97bb807da9751c7, type: 3}

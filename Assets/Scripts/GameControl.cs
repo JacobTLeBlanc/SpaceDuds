@@ -27,6 +27,9 @@ public class GameControl : MonoBehaviour
     // Heart PowerUp
     public GameObject heartPrefab;
 
+    // Triple Shot
+    public GameObject triplePrefab;
+
     // Boss
     public GameObject[] bosses;
     int currentBoss = 0;
@@ -80,7 +83,6 @@ public class GameControl : MonoBehaviour
         if (score % 100 == 0 && score != 0)
         {
             bossBattle = true;
-            scrollSpeed = 0.0f;
         }
 
         // Spawn boss after delay
@@ -90,6 +92,7 @@ public class GameControl : MonoBehaviour
 
             if (bossDelay < 0 && !bossSpawn)
             {
+                scrollSpeed = 0.0f;
                 Instantiate(bosses[currentBoss % bosses.Length], gameObject.transform.position + Vector3.up * 4, rotateZ);
                 bossSpawn = true;
                 currentBoss++;
@@ -145,13 +148,18 @@ public class GameControl : MonoBehaviour
         coinAmount.text = coins.ToString();
     }
 
-    public void spawnHeart(int chance, Vector3 position)
+    public void spawnPowerUp(int chance, Vector3 position)
     {
         int randInt = Random.Range(0, chance);
 
         if (randInt == 0)
         {
             Instantiate(heartPrefab, position, Quaternion.identity);
+        }
+
+        if (randInt == 1)
+        {
+            Instantiate(triplePrefab, position, Quaternion.identity);
         }
     }
 }

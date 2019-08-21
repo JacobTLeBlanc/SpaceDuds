@@ -29,6 +29,10 @@ public class PlayerController : MonoBehaviour
     public float timeBullet = 0.5f;
     float bulletTimer;
 
+    // Triple Shot
+    public bool tripleShot = false;
+    public float tripleShotTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +51,11 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (tripleShot)
+            {
+                TripleFire();
+            }
+
             Fire();
         }
 
@@ -98,6 +107,16 @@ public class PlayerController : MonoBehaviour
 
             UIBullet.instance.SetValue((timeBullet - bulletTimer) * 1.0f/timeBullet);
         }
+
+        if (tripleShot)
+        {
+            tripleShotTimer -= Time.deltaTime;
+
+            if (tripleShotTimer < 0)
+            {
+                tripleShot = false;
+            }
+        }
     }
 
     // Used Fixed Update to smooth movement
@@ -128,6 +147,24 @@ public class PlayerController : MonoBehaviour
         // Activate bullet delay
         bulletShot = true;
         bulletTimer = timeBullet;
+    }
+
+    void TripleFire()
+    {
+        if (bulletShot) {
+            return;
+        }
+
+        GameObject bullet1 = Instantiate(bulletPrefab, rb2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        GameObject bullet2 = Instantiate(bulletPrefab, rb2d.position + Vector2.up * 0.5f, Quaternion.identity);
+
+        Vector2 direction = new Vector2(0.25f, 1.0f);
+        Projectile projectile = bullet1.GetComponent<Projectile>();
+        projectile.Launch(direction, 300.0f);
+
+        direction = new Vector2(-0.25f, 1.0f);
+        projectile = bullet2.GetComponent<Projectile>();
+        projectile.Launch(direction, 300.0f);
     }
 
     // Change health 
