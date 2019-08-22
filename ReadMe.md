@@ -16,6 +16,6 @@ List of things to add:
 List of bugs:
 
 	[ ] Coins reset after leaving app 
-	[ ] Player dissappears after invicibility flashes
+	[x] Player dissappears after invicibility flashes
 
 
