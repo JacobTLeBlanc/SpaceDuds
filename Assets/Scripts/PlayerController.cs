@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
     public bool tripleShot = false;
     public float tripleShotTimer;
 
+    // Infinite Shot
+    public bool infiniteShot = false;
+    public float infiniteShotTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -115,6 +119,17 @@ public class PlayerController : MonoBehaviour
             if (tripleShotTimer < 0)
             {
                 tripleShot = false;
+            }
+        }
+
+        if (infiniteShot)
+        {
+            infiniteShotTimer -= Time.deltaTime;
+
+            if (infiniteShotTimer < 0)
+            {
+                infiniteShot = false;
+                timeBullet = 0.5f;
             }
         }
     }

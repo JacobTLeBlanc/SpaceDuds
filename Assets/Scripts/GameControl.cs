@@ -30,6 +30,9 @@ public class GameControl : MonoBehaviour
     // Triple Shot
     public GameObject triplePrefab;
 
+    // Infinity PowerUp
+    public GameObject infinityPrefab;
+
     // Boss
     public GameObject[] bosses;
     int currentBoss = 0;
@@ -160,6 +163,11 @@ public class GameControl : MonoBehaviour
         if (randInt == 1)
         {
             Instantiate(triplePrefab, position, Quaternion.identity);
+        }
+
+        if (randInt == 2)
+        {
+            Instantiate(infinityPrefab, position, Quaternion.identity);
         }
     }
 }

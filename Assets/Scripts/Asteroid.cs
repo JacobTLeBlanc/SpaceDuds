@@ -44,7 +44,7 @@ public class Asteroid : MonoBehaviour
 
         // Random spawns
         GameControl.instance.spawnCoin(5, this.transform.position);
-        GameControl.instance.spawnPowerUp(50, this.transform.position);
+        GameControl.instance.spawnPowerUp(100, this.transform.position);
 
         // Destroy asteroid
         Destroy(gameObject);
