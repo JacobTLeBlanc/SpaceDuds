@@ -8,10 +8,10 @@ List of things to add:
 	[x] 3 bosses [3 / 3]
 	[x] Scaled difficulty
 	[x] Bosses have unique attacks
-	[ ] Power-Ups
+	[x] Power-Ups
 		[x] Hearts
 		[x] Triple Shot
-		[ ] Speed Shot
+		[x] Speed Shot
 
 List of bugs:
 
