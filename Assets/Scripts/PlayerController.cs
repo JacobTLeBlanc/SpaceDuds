@@ -74,12 +74,6 @@ public class PlayerController : MonoBehaviour
             invicibilityFlashTimer -= Time.deltaTime;
             invicibleTimer -= Time.deltaTime;
 
-            if (invicibleTimer < 0)
-            {
-                isInvicible = false;
-                gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            }
-
             if (invicibilityFlashTimer < 0)
             {
                 if (spriteRender)
@@ -93,6 +87,12 @@ public class PlayerController : MonoBehaviour
                     spriteRender = true;
                 }
                 invicibilityFlashTimer = flashLength;
+            }
+
+            if (invicibleTimer < 0)
+            {
+                gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                isInvicible = false;
             }
         }
 
