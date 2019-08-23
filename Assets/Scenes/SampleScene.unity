@@ -576,6 +576,16 @@ MonoBehaviour:
   - {fileID: 6879191432091183600, guid: 0f5bfccce48badcf29e0c0904f8ffa32, type: 3}
   - {fileID: 1822913618710748853, guid: acacba1a2b7295937b0efdb0ac29b875, type: 3}
   - {fileID: 2080463697794998950, guid: 96080e9d775f32439a057b987606dfde, type: 3}
+  - {fileID: 6055491875931742493, guid: a0b1f1515fed7b915aad9a671d09d56c, type: 3}
+  - {fileID: 6077405869549491654, guid: 22d3affde5bd0fd01afb799c3bff9a12, type: 3}
+  - {fileID: 2624319362656734064, guid: b371165f40b104cc3894a3c83526a133, type: 3}
+  - {fileID: 3194224766872561618, guid: 3ca31fbfcc119f09baefe2e204c2496b, type: 3}
+  - {fileID: 5079913793210839205, guid: 2889459c8ab066f1a8e05fdd35d2a2a9, type: 3}
+  - {fileID: 2898203500493883215, guid: 1eb5d727465f759738f4cb1ab5a8566f, type: 3}
+  - {fileID: 5396301809784237873, guid: cfe60d61715bb33e2a6553e69f81d822, type: 3}
+  - {fileID: 1325273325959082245, guid: 422de71b04ec332a997f37b5db55d4c2, type: 3}
+  - {fileID: 8678518070672640201, guid: fe66338b2d051a9188985fcd954af244, type: 3}
+  - {fileID: 3561683162936552134, guid: 7f38519bcac41a87fb32c2c27376f677, type: 3}
   asteroidTimerLength: 4
   scoreText: {fileID: 924782385}
   coinPrefab: {fileID: 235954932001228568, guid: ac2b3d71996db0b139269c71fa78632a,
