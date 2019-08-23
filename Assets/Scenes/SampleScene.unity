@@ -585,6 +585,7 @@ MonoBehaviour:
     type: 3}
   triplePrefab: {fileID: 4680313290512597760, guid: 5dc521afcb5d5f4e7a9b2ec1b866bb4f,
     type: 3}
+  infinityPrefab: {fileID: 0}
   bosses:
   - {fileID: 2982299558667615629, guid: 73e0343d3fc81382793d693a20074ba7, type: 3}
   - {fileID: 4356493810143160169, guid: f3701bf8a6258b22d9dea841fcef5f0d, type: 3}
