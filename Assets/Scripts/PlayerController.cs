@@ -201,5 +201,10 @@ public class PlayerController : MonoBehaviour
         // Update health accordingly
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealth.instance.updateHearts(currentHealth);
+
+        if (health == 0)
+        {
+            GameControl.instance.gameOver = true;
+        }
     }
 }

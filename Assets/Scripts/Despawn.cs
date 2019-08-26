@@ -22,7 +22,7 @@ public class Despawn : MonoBehaviour
         // Despawn when timer reaches 0
         if (destroyTimer < 0)
         {
-            Destroy(gameObject);
+            DestroyImmediate(gameObject);
         }
     }
 }

@@ -33,6 +33,10 @@ public class GameControl : MonoBehaviour
     // Infinity PowerUp
     public GameObject infinityPrefab;
 
+    // GameOver
+    public GameObject gameOverUI;
+    public bool gameOver;
+
     // Boss
     public GameObject[] bosses;
     int currentBoss = 0;
@@ -76,7 +80,7 @@ public class GameControl : MonoBehaviour
         }
 
         // Timer for asteroid clusters spawns
-        if (timerAsteroid < 0 && !bossBattle)
+        if (timerAsteroid < 0 && !bossBattle && !gameOver)
         {
             SpawnAsteroid();
             timerAsteroid = asteroidTimerLength;
@@ -101,11 +105,18 @@ public class GameControl : MonoBehaviour
                 currentBoss++;
             }
         }
+
+        if (gameOver)
+        {
+            gameOverUI.active = true;
+            scrollSpeed = 0.0f;
+        }
     }
 
     // Spawn asteroid
     void SpawnAsteroid()
     {
+
         // Randomize if flipped or not
         int isFlipped = Random.Range(0, 2);
         int rotation = 0;
