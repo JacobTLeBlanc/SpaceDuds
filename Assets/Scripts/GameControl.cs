@@ -72,7 +72,7 @@ public class GameControl : MonoBehaviour
         timerAsteroid -= Time.deltaTime;
 
         // Add score
-        if (scoreTimer < 0 && !bossBattle)
+        if (scoreTimer < 0 && !bossBattle && !gameOver)
         {
             score++;
             scoreText.text = score.ToString();
