@@ -12,10 +12,12 @@ List of things to add:
 		[x] Hearts
 		[x] Triple Shot
 		[x] Speed Shot
+	[ ] Allow data to be saved
 
 List of bugs:
 
 	[ ] Coins reset after leaving app 
 	[x] Player dissappears after invicibility flashes
+
 
 
