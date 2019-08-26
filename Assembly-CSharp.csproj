@@ -62,25 +62,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Asteroid.cs" />
     <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
     <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
     <Compile Include="Assets\Scripts\Boss\BossProjectile.cs" />
     <Compile Include="Assets\Scripts\Boss\BossShooting.cs" />
-    <Compile Include="Assets\Scripts\Coin.cs" />
-    <Compile Include="Assets\Scripts\Despawn.cs" />
-    <Compile Include="Assets\Scripts\DestroyedAsteroid.cs" />
-    <Compile Include="Assets\Scripts\GameControl.cs" />
-    <Compile Include="Assets\Scripts\HeartPowerUp.cs" />
-    <Compile Include="Assets\Scripts\InfinityPowerUp.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Projectile.cs" />
-    <Compile Include="Assets\Scripts\Repeating.cs" />
-    <Compile Include="Assets\Scripts\ReplayButton.cs" />
-    <Compile Include="Assets\Scripts\ScrollingObject.cs" />
-    <Compile Include="Assets\Scripts\UIBullet.cs" />
-    <Compile Include="Assets\Scripts\UIHealth.cs" />
-    <Compile Include="Assets\Scripts\X3PowerUp.cs" />
+    <Compile Include="Assets\Scripts\Buttons\ReplayButton.cs" />
+    <Compile Include="Assets\Scripts\Game\Asteroid.cs" />
+    <Compile Include="Assets\Scripts\Game\Coin.cs" />
+    <Compile Include="Assets\Scripts\Game\Despawn.cs" />
+    <Compile Include="Assets\Scripts\Game\GameControl.cs" />
+    <Compile Include="Assets\Scripts\Game\HeartPowerUp.cs" />
+    <Compile Include="Assets\Scripts\Game\InfinityPowerUp.cs" />
+    <Compile Include="Assets\Scripts\Game\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Game\Repeating.cs" />
+    <Compile Include="Assets\Scripts\Game\ScrollingObject.cs" />
+    <Compile Include="Assets\Scripts\Game\UIBullet.cs" />
+    <Compile Include="Assets\Scripts\Game\UIHealth.cs" />
+    <Compile Include="Assets\Scripts\Game\X3PowerUp.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/lebla/Downloads/MyCode/SpaceDuds/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
