@@ -35,6 +35,8 @@ public class GameControl : MonoBehaviour
 
     // GameOver
     public GameObject gameOverUI;
+    public GameObject healthUI;
+    public GameObject bulletUI;
     public bool gameOver;
 
     // Boss
@@ -109,6 +111,8 @@ public class GameControl : MonoBehaviour
         if (gameOver)
         {
             gameOverUI.active = true;
+            bulletUI.active = false;
+            healthUI.active = false;
             scrollSpeed = 0.0f;
         }
     }
