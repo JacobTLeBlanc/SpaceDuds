@@ -13,6 +13,7 @@ List of things to add:
 		[x] Triple Shot
 		[x] Speed Shot
 	[ ] Allow data to be saved
+	[x] Settings Screen
 
 List of bugs:
 
