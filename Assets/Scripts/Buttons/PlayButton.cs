@@ -4,18 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SettingsButton : MonoBehaviour
+public class PlayButton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
         Button btn = this.GetComponent<Button>(); // Get Button
-        btn.onClick.AddListener(openSettings); // On Click Open Settings
+        btn.onClick.AddListener(playGame); // Play Game On Click
     }
 
-    void openSettings()
+    void playGame()
     {
-        SceneManager.LoadScene("Settings"); // Load Settings Scene
+        SceneManager.LoadScene("GameScene"); // Open Game 
     }
 }
-

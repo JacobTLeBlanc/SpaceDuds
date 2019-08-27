@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
     <Compile Include="Assets\Scripts\Boss\BossProjectile.cs" />
     <Compile Include="Assets\Scripts\Boss\BossShooting.cs" />
+    <Compile Include="Assets\Scripts\Buttons\MenuButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\PlayButton.cs" />
     <Compile Include="Assets\Scripts\Buttons\ReplayButton.cs" />
     <Compile Include="Assets\Scripts\Buttons\SettingsButton.cs" />
     <Compile Include="Assets\Scripts\Game\Asteroid.cs" />
