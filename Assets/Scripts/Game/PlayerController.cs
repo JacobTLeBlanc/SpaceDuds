@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPrefab; // Bullet Prefab
     Rigidbody2D rb2d; 
     float horizontal; 
-    float vertical;
 
     // Health
     int currentHealth;
@@ -48,9 +47,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get input from gyroscope
-        horizontal = Input.acceleration.x;
-
         // Test on computer
         // horizontal = Input.GetAxis("Horizontal");
         // if (Input.GetKeyDown(KeyCode.Space))
@@ -66,9 +62,25 @@ public class PlayerController : MonoBehaviour
         // Check if screen is touched is pressed then fire
         for (int i = 0; i < Input.touchCount; i++)
         {
-            if(Input.GetTouch(i).phase == TouchPhase.Began)
+            if (Input.GetTouch(i).position.x < Screen.width / 2)
             {
                 Fire();
+            }
+
+            Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
+            RaycastHit raycastHit;
+
+            if (Physics.Raycast(raycast, out raycastHit))
+            {
+                if (raycastHit.collider.name == "Left")
+                {
+                    horizontal = -1.0f;
+                }
+
+                if (raycastHit.collider.name == "Right")
+                {
+                    horizontal = 1.0f;
+                }
             }
         }
 
