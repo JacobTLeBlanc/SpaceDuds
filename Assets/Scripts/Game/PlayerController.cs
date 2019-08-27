@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Test on computer
-        // horizontal = Input.GetAxis("Horizontal");
+        horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
         // if (Input.GetKeyDown(KeyCode.Space))
         // {
         //     if (tripleShot)
@@ -62,25 +63,14 @@ public class PlayerController : MonoBehaviour
         // Check if screen is touched is pressed then fire
         for (int i = 0; i < Input.touchCount; i++)
         {
-            if (Input.GetTouch(i).position.x < Screen.width / 2)
+            if (Input.GetTouch(i).position.x >= Screen.width / 2)
             {
+                if (tripleShot)
+                {
+                    TripleFire();
+                }
+
                 Fire();
-            }
-
-            Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
-            RaycastHit raycastHit;
-
-            if (Physics.Raycast(raycast, out raycastHit))
-            {
-                if (raycastHit.collider.name == "Left")
-                {
-                    horizontal = -1.0f;
-                }
-
-                if (raycastHit.collider.name == "Right")
-                {
-                    horizontal = 1.0f;
-                }
             }
         }
 
@@ -150,9 +140,9 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() 
     {
         // Use input to change position 
-        Vector2 move = new Vector2(horizontal, 0);
+        Vector2 move = new Vector2(horizontal * speed, 0);
         Vector2 position = rb2d.position;
-        position = position + move * speed * Time.deltaTime;
+        position = position + move * Time.deltaTime;
         rb2d.position = position;
     }
 

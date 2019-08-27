@@ -34,6 +34,7 @@ public class GameControl : MonoBehaviour
     public GameObject infinityPrefab;
 
     // GameOver
+    public GameObject controlsUI;
     public GameObject gameOverUI;
     public GameObject healthUI;
     public GameObject bulletUI;
@@ -110,6 +111,7 @@ public class GameControl : MonoBehaviour
 
         if (gameOver)
         {
+            controlsUI.active = false;
             gameOverUI.active = true;
             bulletUI.active = false;
             healthUI.active = false;
