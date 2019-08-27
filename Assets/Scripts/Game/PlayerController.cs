@@ -49,28 +49,28 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Get input from gyroscope
-        // horizontal = Input.acceleration.x;
+        horizontal = Input.acceleration.x;
 
         // Test on computer
-        horizontal = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (tripleShot)
-            {
-                TripleFire();
-            }
-
-            Fire();
-        }
+        // horizontal = Input.GetAxis("Horizontal");
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     if (tripleShot)
+        //     {
+        //         TripleFire();
+        //     }
+        // 
+        //     Fire();
+        // }
 
         // Check if screen is touched is pressed then fire
-        // for (int i = 0; i < Input.touchCount; i++)
-        // {
-        //     if(Input.GetTouch(i).phase == TouchPhase.Began)
-        //     {
-        //         Fire();
-        //     }
-        // }
+        for (int i = 0; i < Input.touchCount; i++)
+        {
+            if(Input.GetTouch(i).phase == TouchPhase.Began)
+            {
+                Fire();
+            }
+        }
 
         // Invicible timer when hit
         if (isInvicible)
