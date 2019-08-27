@@ -14,11 +14,13 @@ List of things to add:
 		[x] Speed Shot
 	[ ] Allow data to be saved
 	[x] Settings Screen
+	[ ] Touch Controls
 
 List of bugs:
 
 	[ ] Coins reset after leaving app 
 	[x] Player dissappears after invicibility flashes
+	[ ] 2nd boss spawns to early
 
 
 
