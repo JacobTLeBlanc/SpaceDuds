@@ -1,6 +1,6 @@
 List of things to add:
 
-	[ ] Home Screen
+	[x] Home Screen
 	[x] Game Over Screen
 	[ ] Shop
 	[x] Atleast 20 Asteroid Clusters [20 / 20]
