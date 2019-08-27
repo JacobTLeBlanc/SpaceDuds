@@ -14,7 +14,8 @@ List of things to add:
 		[x] Speed Shot
 	[ ] Allow data to be saved
 	[x] Settings Screen
-	[ ] Touch Controls
+	[x] Touch Controls
+	[ ] Pause Button
 
 List of bugs:
 
