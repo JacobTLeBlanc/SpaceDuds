@@ -40,6 +40,10 @@ public class GameControl : MonoBehaviour
     public GameObject bulletUI;
     public bool gameOver;
 
+    // Pause
+    public bool pause;
+    public GameObject pauseMenu;
+
     // Boss
     public GameObject[] bosses;
     int currentBoss = 0;
@@ -71,11 +75,14 @@ public class GameControl : MonoBehaviour
     void Update()
     {
         // Update timer
-        scoreTimer -= Time.deltaTime;
-        timerAsteroid -= Time.deltaTime;
+        if (!pause)
+        {
+            scoreTimer -= Time.deltaTime;
+            timerAsteroid -= Time.deltaTime;
+        }
 
         // Add score
-        if (scoreTimer < 0 && !bossBattle && !gameOver)
+        if (scoreTimer < 0 && !bossBattle && !gameOver && !pause)
         {
             score++;
             scoreText.text = score.ToString();
@@ -83,7 +90,7 @@ public class GameControl : MonoBehaviour
         }
 
         // Timer for asteroid clusters spawns
-        if (timerAsteroid < 0 && !bossBattle && !gameOver)
+        if (timerAsteroid < 0 && !bossBattle && !gameOver && !pause)
         {
             SpawnAsteroid();
             timerAsteroid = asteroidTimerLength;
@@ -116,6 +123,15 @@ public class GameControl : MonoBehaviour
             bulletUI.active = false;
             healthUI.active = false;
             scrollSpeed = 0.0f;
+        }
+
+        if (pause)
+        {
+            scrollSpeed = 0.0f;
+            bulletUI.active = false;
+            healthUI.active = false;
+            controlsUI.active = false;
+            pauseMenu.active = true;
         }
     }
 
