@@ -15,7 +15,7 @@ List of things to add:
 	[ ] Allow data to be saved
 	[x] Settings Screen
 	[x] Touch Controls
-	[ ] Pause Button
+	[x] Pause Button
 
 List of bugs:
 
