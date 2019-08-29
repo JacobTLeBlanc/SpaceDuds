@@ -3276,6 +3276,11 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3898758449164327004, guid: 62336cc62174d744b97bb807da9751c7,
+        type: 3}
+      propertyPath: timeBullet
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62336cc62174d744b97bb807da9751c7, type: 3}
 --- !u!1001 &3982953928144268453
