@@ -76,11 +76,13 @@
     <Compile Include="Assets\Scripts\Game\Coin.cs" />
     <Compile Include="Assets\Scripts\Game\Despawn.cs" />
     <Compile Include="Assets\Scripts\Game\GameControl.cs" />
+    <Compile Include="Assets\Scripts\Game\GameData.cs" />
     <Compile Include="Assets\Scripts\Game\HeartPowerUp.cs" />
     <Compile Include="Assets\Scripts\Game\InfinityPowerUp.cs" />
     <Compile Include="Assets\Scripts\Game\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile.cs" />
     <Compile Include="Assets\Scripts\Game\Repeating.cs" />
+    <Compile Include="Assets\Scripts\Game\SaveLoad.cs" />
     <Compile Include="Assets\Scripts\Game\ScrollingObject.cs" />
     <Compile Include="Assets\Scripts\Game\UIBullet.cs" />
     <Compile Include="Assets\Scripts\Game\UIHealth.cs" />

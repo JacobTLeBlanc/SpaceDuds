@@ -22,7 +22,7 @@ public class GameControl : MonoBehaviour
     // Coins
     public GameObject coinPrefab;
     public Text coinAmount;
-    private int coins = 0;
+    private int coins;
 
     // Heart PowerUp
     public GameObject heartPrefab;
@@ -69,6 +69,13 @@ public class GameControl : MonoBehaviour
         scoreTimer = scoreTimerLength;      
         timerAsteroid = asteroidTimerLength;  
         bossDelay = asteroidTimerLength;
+
+        // Load
+        SaveLoad.Load();
+
+        // Get coins
+        coins = SaveLoad.data.totalCoins;
+        coinAmount.text = coins.ToString();
     }
 
     // Update is called once per frame
@@ -123,6 +130,9 @@ public class GameControl : MonoBehaviour
             bulletUI.active = false;
             healthUI.active = false;
             scrollSpeed = 0.0f;
+
+            SaveLoad.data.totalCoins = coins;
+            SaveLoad.Save();
         }
 
         if (pause)
