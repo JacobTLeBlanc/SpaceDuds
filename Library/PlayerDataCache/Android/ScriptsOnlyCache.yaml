@@ -94,47 +94,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9476}
     - Class: 114
-      Script: {instanceID: 9646}
-    - Class: 114
-      Script: {instanceID: 9768}
+      Script: {instanceID: 9648}
     - Class: 114
       Script: {instanceID: 9770}
     - Class: 114
-      Script: {instanceID: 9848}
+      Script: {instanceID: 9772}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 9918}
+      Script: {instanceID: 9876}
     - Class: 114
-      Script: {instanceID: 9990}
+      Script: {instanceID: 9920}
     - Class: 114
-      Script: {instanceID: 10046}
+      Script: {instanceID: 9992}
     - Class: 114
-      Script: {instanceID: 10102}
+      Script: {instanceID: 10048}
     - Class: 114
-      Script: {instanceID: 10124}
+      Script: {instanceID: 10104}
     - Class: 114
-      Script: {instanceID: 10172}
+      Script: {instanceID: 10126}
     - Class: 114
-      Script: {instanceID: 10180}
+      Script: {instanceID: 10174}
     - Class: 114
-      Script: {instanceID: 10190}
+      Script: {instanceID: 10182}
     - Class: 114
-      Script: {instanceID: 10232}
+      Script: {instanceID: 10192}
     - Class: 114
-      Script: {instanceID: 10272}
+      Script: {instanceID: 10234}
     - Class: 114
-      Script: {instanceID: 10288}
+      Script: {instanceID: 10274}
     - Class: 114
-      Script: {instanceID: 10626}
+      Script: {instanceID: 10290}
     - Class: 114
-      Script: {instanceID: 10826}
+      Script: {instanceID: 10630}
     - Class: 114
-      Script: {instanceID: 10848}
+      Script: {instanceID: 10830}
     - Class: 114
-      Script: {instanceID: 10878}
+      Script: {instanceID: 10852}
     - Class: 114
-      Script: {instanceID: 10896}
+      Script: {instanceID: 10882}
+    - Class: 114
+      Script: {instanceID: 10900}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -183,9 +183,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9416}
     - Class: 114
-      Script: {instanceID: 10046}
+      Script: {instanceID: 10048}
     - Class: 114
-      Script: {instanceID: 10112}
+      Script: {instanceID: 10114}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -234,7 +234,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9416}
     - Class: 114
-      Script: {instanceID: 10288}
+      Script: {instanceID: 10290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -278,7 +278,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: d636157aa4d46bddd8f032b10f5b7c5a
+      Hash: 42c0d9dd2572dcee386729fe4f1bd049
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameControl
@@ -1313,4 +1313,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/Settings.unity
-  playerPath: C:/Users/lebla/Downloads/MyCode/SpaceDuds/Builds/Android_0.6.apk
+  playerPath: C:/Users/lebla/Downloads/MyCode/SpaceDuds/Builds/Android_0.7.apk
