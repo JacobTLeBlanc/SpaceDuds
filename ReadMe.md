@@ -12,14 +12,14 @@ List of things to add:
 		[x] Hearts
 		[x] Triple Shot
 		[x] Speed Shot
-	[ ] Allow data to be saved
+	[x] Allow data to be saved
 	[x] Settings Screen
 	[x] Touch Controls
 	[x] Pause Button
 
 List of bugs:
 
-	[ ] Coins reset after leaving app 
+	[x] Coins reset after leaving app 
 	[x] Player dissappears after invicibility flashes
 	[ ] 2nd boss spawns to early
 
