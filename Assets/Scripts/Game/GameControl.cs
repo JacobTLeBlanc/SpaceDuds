@@ -40,6 +40,9 @@ public class GameControl : MonoBehaviour
     public GameObject bulletUI;
     public bool gameOver;
 
+    public Text thisScore;
+    public Text highScore;
+
     // Pause
     public bool pause;
     public GameObject pauseMenu;
@@ -130,6 +133,15 @@ public class GameControl : MonoBehaviour
             bulletUI.active = false;
             healthUI.active = false;
             scrollSpeed = 0.0f;
+
+            thisScore.text = score.ToString();
+
+            if (score > SaveLoad.data.highscore)
+            {
+                SaveLoad.data.highscore = score;
+            }
+
+            highScore.text = "HighScore: " + SaveLoad.data.highscore.ToString();
 
             SaveLoad.data.totalCoins = coins;
             SaveLoad.Save();
