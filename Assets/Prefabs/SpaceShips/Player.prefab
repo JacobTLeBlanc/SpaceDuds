@@ -273,7 +273,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  bulletPrefab: {fileID: 1780200782082241304, guid: 5e5a047e096c9c7ada21eda77699471c,
-    type: 3}
+  distance: 0.5
+  bulletPrefab: {fileID: 0}
   timeInvicible: 2
-  timeBullet: 0.5
+  timeBullet: 1
+  tripleShot: 0
+  tripleShotTimer: 0
+  infiniteShot: 0
+  infiniteShotTimer: 0

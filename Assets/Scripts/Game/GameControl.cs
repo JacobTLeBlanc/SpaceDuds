@@ -8,6 +8,10 @@ public class GameControl : MonoBehaviour
     public static GameControl instance; // This instance
     public float scrollSpeed = -2.0f; // Scroll Speed
 
+    // Player
+    public GameObject[] spaceShips;
+    public GameObject[] projectiles;
+
     // Asteroid Clusters
     public GameObject[] asteroids = new GameObject[5];
     public float asteroidTimerLength = 2.0f;
@@ -75,6 +79,10 @@ public class GameControl : MonoBehaviour
 
         // Load
         SaveLoad.Load();
+
+        // Set Spaceships/Projectile
+        PlayerController player = Instantiate(spaceShips[SaveLoad.data.currentPlayer], new Vector3(0, -2, 0), Quaternion.identity).GetComponent<PlayerController>();
+        player.bulletPrefab = projectiles[SaveLoad.data.currentProjectile];
 
         // Get coins
         coins = SaveLoad.data.totalCoins;

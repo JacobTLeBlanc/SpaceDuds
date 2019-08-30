@@ -6,6 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 0.1f; // Player speed
+    public float distance;
 
     public GameObject bulletPrefab; // Bullet Prefab
     Rigidbody2D rb2d; 
@@ -154,7 +155,7 @@ public class PlayerController : MonoBehaviour
         } 
 
         // Create bullet object
-        GameObject bulletObject = Instantiate(bulletPrefab, rb2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        GameObject bulletObject = Instantiate(bulletPrefab, rb2d.position + Vector2.up * distance, Quaternion.identity);
         Vector2 direction = new Vector2(0, 1);
 
         // Call launch method on bullet
