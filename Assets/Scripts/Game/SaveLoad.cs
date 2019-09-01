@@ -23,7 +23,7 @@ public static class SaveLoad
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/player.gd", FileMode.Open);
             SaveLoad.data = (GameData)bf.Deserialize(file);
-            Debug.Log("Loading");
+            Debug.Log(data.spaceships);
             file.Close();
         }
    }

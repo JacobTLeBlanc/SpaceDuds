@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
     <Compile Include="Assets\Scripts\Boss\BossProjectile.cs" />
     <Compile Include="Assets\Scripts\Boss\BossShooting.cs" />
+    <Compile Include="Assets\Scripts\Buttons\ItemButton.cs" />
     <Compile Include="Assets\Scripts\Buttons\MenuButton.cs" />
     <Compile Include="Assets\Scripts\Buttons\PauseButton.cs" />
     <Compile Include="Assets\Scripts\Buttons\PlayButton.cs" />
@@ -79,11 +80,14 @@
     <Compile Include="Assets\Scripts\Game\GameData.cs" />
     <Compile Include="Assets\Scripts\Game\HeartPowerUp.cs" />
     <Compile Include="Assets\Scripts\Game\InfinityPowerUp.cs" />
+    <Compile Include="Assets\Scripts\Game\Items.cs" />
     <Compile Include="Assets\Scripts\Game\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile.cs" />
     <Compile Include="Assets\Scripts\Game\Repeating.cs" />
     <Compile Include="Assets\Scripts\Game\SaveLoad.cs" />
     <Compile Include="Assets\Scripts\Game\ScrollingObject.cs" />
+    <Compile Include="Assets\Scripts\Game\ShopAccept.cs" />
+    <Compile Include="Assets\Scripts\Game\ShopItem.cs" />
     <Compile Include="Assets\Scripts\Game\UIBullet.cs" />
     <Compile Include="Assets\Scripts\Game\UIHealth.cs" />
     <Compile Include="Assets\Scripts\Game\X3PowerUp.cs" />
