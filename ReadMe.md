@@ -4,7 +4,7 @@ List of things to add:
 	[x] Game Over Screen
 	[x] Shop
 	[x] Atleast 20 Asteroid Clusters [20 / 20]
-	[ ] Ads
+	[x] Ads
 	[x] 3 bosses [3 / 3]
 	[x] Scaled difficulty
 	[x] Bosses have unique attacks
@@ -22,6 +22,7 @@ List of bugs:
 	[x] Coins reset after leaving app 
 	[x] Player dissappears after invicibility flashes
 	[ ] 2nd boss spawns to early
+	[ ] Bullet destroyed at top of screen
 
 
 
