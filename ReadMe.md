@@ -24,7 +24,7 @@ List of bugs:
 	[x] Coins reset after leaving app 
 	[x] Player dissappears after invicibility flashes
 	[ ] 2nd boss spawns to early
-	[ ] Bullet destroyed at top of screen
+	[x] Bullet destroyed at top of screen
 
 
 
