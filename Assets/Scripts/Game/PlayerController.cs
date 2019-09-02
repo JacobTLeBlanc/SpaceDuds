@@ -208,6 +208,7 @@ public class PlayerController : MonoBehaviour
         if (health == 0)
         {
             GameControl.instance.gameOver = true;
+            GameControl.instance.ShowAd();
         }
     }
 }

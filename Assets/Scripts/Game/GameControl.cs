@@ -45,7 +45,6 @@ public class GameControl : MonoBehaviour
     public GameObject bulletUI;
     public bool gameOver;
 
-    public Text thisScore;
     public Text highScore;
 
     // Pause
@@ -143,10 +142,6 @@ public class GameControl : MonoBehaviour
             healthUI.active = false;
             scrollSpeed = 0.0f;
 
-            ShowAd();
-
-            thisScore.text = score.ToString();
-
             if (score > SaveLoad.data.highscore)
             {
                 SaveLoad.data.highscore = score;
@@ -237,7 +232,7 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    void ShowAd()
+    public void ShowAd()
     {
         if (Advertisement.IsReady())
         {
