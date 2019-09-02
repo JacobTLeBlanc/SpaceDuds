@@ -2,7 +2,7 @@ List of things to add:
 
 	[x] Home Screen
 	[x] Game Over Screen
-	[ ] Shop
+	[x] Shop
 	[x] Atleast 20 Asteroid Clusters [20 / 20]
 	[ ] Ads
 	[x] 3 bosses [3 / 3]
