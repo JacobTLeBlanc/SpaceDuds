@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Game\HeartPowerUp.cs" />
     <Compile Include="Assets\Scripts\Game\InfinityPowerUp.cs" />
     <Compile Include="Assets\Scripts\Game\Items.cs" />
+    <Compile Include="Assets\Scripts\Game\MenuUI.cs" />
     <Compile Include="Assets\Scripts\Game\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile.cs" />
     <Compile Include="Assets\Scripts\Game\Repeating.cs" />
