@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
 public class GameControl : MonoBehaviour
 {
@@ -142,6 +143,8 @@ public class GameControl : MonoBehaviour
             healthUI.active = false;
             scrollSpeed = 0.0f;
 
+            ShowAd();
+
             thisScore.text = score.ToString();
 
             if (score > SaveLoad.data.highscore)
@@ -231,6 +234,14 @@ public class GameControl : MonoBehaviour
         if (randInt == 2)
         {
             Instantiate(infinityPrefab, position, Quaternion.identity);
+        }
+    }
+
+    void ShowAd()
+    {
+        if (Advertisement.IsReady())
+        {
+            Advertisement.Show();
         }
     }
 }
