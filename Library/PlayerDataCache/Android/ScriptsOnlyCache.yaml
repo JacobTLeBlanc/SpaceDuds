@@ -9,10 +9,13 @@ ScriptsOnlyBuild:
     - BossProjectile
     - BossShooting
     - Coin
+    - CoinUI
     - Despawn
     - GameControl
     - HeartPowerUp
     - InfinityPowerUp
+    - ItemButton
+    - Items
     - MenuButton
     - PauseButton
     - PlayButton
@@ -22,6 +25,9 @@ ScriptsOnlyBuild:
     - ReplayButton
     - ScrollingObject
     - SettingsButton
+    - ShopAccept
+    - ShopButton
+    - ShopItem
     - UIBullet
     - UIHealth
     - UnPauseButton
@@ -32,6 +38,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -74,67 +82,67 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9254}
+      Script: {instanceID: 9256}
     - Class: 114
-      Script: {instanceID: 9356}
+      Script: {instanceID: 9360}
     - Class: 114
-      Script: {instanceID: 9358}
+      Script: {instanceID: 9362}
     - Class: 114
-      Script: {instanceID: 9364}
+      Script: {instanceID: 9368}
     - Class: 114
-      Script: {instanceID: 9370}
+      Script: {instanceID: 9374}
     - Class: 114
-      Script: {instanceID: 9378}
+      Script: {instanceID: 9382}
     - Class: 114
-      Script: {instanceID: 9386}
+      Script: {instanceID: 9390}
     - Class: 114
-      Script: {instanceID: 9414}
+      Script: {instanceID: 9418}
     - Class: 114
-      Script: {instanceID: 9416}
+      Script: {instanceID: 9420}
     - Class: 114
-      Script: {instanceID: 9476}
+      Script: {instanceID: 9480}
     - Class: 114
-      Script: {instanceID: 9648}
+      Script: {instanceID: 9652}
     - Class: 114
-      Script: {instanceID: 9770}
+      Script: {instanceID: 9774}
     - Class: 114
-      Script: {instanceID: 9772}
+      Script: {instanceID: 9776}
     - Class: 114
-      Script: {instanceID: 9850}
+      Script: {instanceID: 9856}
     - Class: 114
-      Script: {instanceID: 9876}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 9920}
+      Script: {instanceID: 9928}
     - Class: 114
-      Script: {instanceID: 9992}
+      Script: {instanceID: 10000}
     - Class: 114
-      Script: {instanceID: 10048}
+      Script: {instanceID: 10056}
     - Class: 114
-      Script: {instanceID: 10104}
+      Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10126}
-    - Class: 114
-      Script: {instanceID: 10174}
+      Script: {instanceID: 10134}
     - Class: 114
       Script: {instanceID: 10182}
     - Class: 114
       Script: {instanceID: 10192}
     - Class: 114
-      Script: {instanceID: 10234}
+      Script: {instanceID: 10202}
     - Class: 114
-      Script: {instanceID: 10274}
+      Script: {instanceID: 10244}
     - Class: 114
-      Script: {instanceID: 10290}
+      Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 10630}
+      Script: {instanceID: 10300}
     - Class: 114
-      Script: {instanceID: 10830}
+      Script: {instanceID: 10640}
     - Class: 114
-      Script: {instanceID: 10852}
+      Script: {instanceID: 10840}
     - Class: 114
-      Script: {instanceID: 10882}
+      Script: {instanceID: 10864}
     - Class: 114
-      Script: {instanceID: 10900}
+      Script: {instanceID: 10894}
+    - Class: 114
+      Script: {instanceID: 10912}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -169,23 +177,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9356}
+      Script: {instanceID: 9360}
     - Class: 114
-      Script: {instanceID: 9358}
+      Script: {instanceID: 9362}
     - Class: 114
-      Script: {instanceID: 9364}
+      Script: {instanceID: 9368}
     - Class: 114
-      Script: {instanceID: 9370}
+      Script: {instanceID: 9374}
     - Class: 114
-      Script: {instanceID: 9378}
+      Script: {instanceID: 9382}
     - Class: 114
-      Script: {instanceID: 9414}
+      Script: {instanceID: 9418}
     - Class: 114
-      Script: {instanceID: 9416}
+      Script: {instanceID: 9420}
     - Class: 114
-      Script: {instanceID: 10048}
+      Script: {instanceID: 9782}
     - Class: 114
-      Script: {instanceID: 10114}
+      Script: {instanceID: 10056}
+    - Class: 114
+      Script: {instanceID: 10122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -220,21 +230,78 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9356}
+      Script: {instanceID: 9360}
     - Class: 114
-      Script: {instanceID: 9358}
+      Script: {instanceID: 9362}
     - Class: 114
-      Script: {instanceID: 9364}
+      Script: {instanceID: 9368}
     - Class: 114
-      Script: {instanceID: 9370}
+      Script: {instanceID: 9374}
     - Class: 114
-      Script: {instanceID: 9378}
+      Script: {instanceID: 9382}
     - Class: 114
-      Script: {instanceID: 9414}
+      Script: {instanceID: 9418}
     - Class: 114
-      Script: {instanceID: 9416}
+      Script: {instanceID: 9420}
     - Class: 114
-      Script: {instanceID: 10290}
+      Script: {instanceID: 10300}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Shop.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9254}
+    - Class: 114
+      Script: {instanceID: 9338}
+    - Class: 114
+      Script: {instanceID: 9360}
+    - Class: 114
+      Script: {instanceID: 9362}
+    - Class: 114
+      Script: {instanceID: 9368}
+    - Class: 114
+      Script: {instanceID: 9374}
+    - Class: 114
+      Script: {instanceID: 9382}
+    - Class: 114
+      Script: {instanceID: 9418}
+    - Class: 114
+      Script: {instanceID: 9420}
+    - Class: 114
+      Script: {instanceID: 9886}
+    - Class: 114
+      Script: {instanceID: 10188}
+    - Class: 114
+      Script: {instanceID: 10854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -278,7 +345,13 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 42c0d9dd2572dcee386729fe4f1bd049
+      Hash: 757fb7185ad0b727a8e64e19579b8607
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopItem
+  - hash:
+      serializedVersion: 2
+      Hash: 195e387c352ec59d43c14c291549c316
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameControl
@@ -312,6 +385,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 00e02ab8c7bcee313df2f292e987d30c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Items
   - hash:
       serializedVersion: 2
       Hash: c80bc562de10fdbf8b2e9bcb89d80421
@@ -524,19 +603,7 @@ ScriptsOnlyBuild:
     className: TiltInput
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: CallbackExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Editor
-    className: Placeholder
-  - hash:
-      serializedVersion: 2
-      Hash: 876d1629503d165e5bc91f68ab92e819
+      Hash: 6061ab9bd8e509a39ea16eeab5cb03e9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -800,6 +867,12 @@ ScriptsOnlyBuild:
     className: Despawn
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopButton
+  - hash:
+      serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
@@ -864,6 +937,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseButton
+  - hash:
+      serializedVersion: 2
+      Hash: 2ea927bda460b2f1c58c01ab4b690c67
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CoinUI
   - hash:
       serializedVersion: 2
       Hash: 4bd1cc3c85989d2213a9a8fd9d09e63f
@@ -1002,6 +1081,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Asteroid
+  - hash:
+      serializedVersion: 2
+      Hash: fb6e8c736cd207d6736a2f536a9343ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopAccept
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1250,6 +1335,12 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: 8bc792b99932b591d3e082bd3d774609
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemButton
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1313,4 +1404,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/Settings.unity
-  playerPath: C:/Users/lebla/Downloads/MyCode/SpaceDuds/Builds/Android_0.7.apk
+  - Assets/Scenes/Shop.unity
+  playerPath: C:/Users/lebla/Downloads/MyCode/SpaceDuds/Builds/Android_0.8.apk
