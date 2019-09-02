@@ -11,7 +11,14 @@ public class ShopItem : MonoBehaviour
 
     private void Start()
     {
-        // needs work
+        if (isSpaceship)
+        {
+            isSold = SaveLoad.data.spaceships[shopIndex];
+        }
+        else
+        {
+            isSold = SaveLoad.data.projectiles[shopIndex];
+        }
     }
 
     public bool buy()

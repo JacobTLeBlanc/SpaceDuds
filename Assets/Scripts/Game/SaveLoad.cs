@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
+using System;
 
 public static class SaveLoad
 {
@@ -23,8 +24,19 @@ public static class SaveLoad
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/player.gd", FileMode.Open);
             SaveLoad.data = (GameData)bf.Deserialize(file);
-            Debug.Log(data.spaceships);
             file.Close();
         }
    }
+
+    public static void Delete()
+    {
+        try
+        {
+            File.Delete(Application.persistentDataPath + "/player.gd");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogException(ex);
+        }
+    }
 }

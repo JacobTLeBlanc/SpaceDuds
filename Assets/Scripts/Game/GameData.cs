@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class GameData
@@ -8,6 +9,8 @@ public class GameData
     public int highscore;
     public int currentPlayer;
     public int currentProjectile;
+    public bool[] spaceships = { true, false };
+    public bool[] projectiles = { true, false };
 
 
     public GameData()
@@ -17,4 +20,5 @@ public class GameData
         currentPlayer = 0;
         currentProjectile = 0;
     }
+
 }
