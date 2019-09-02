@@ -9,8 +9,8 @@ public class GameData
     public int highscore;
     public int currentPlayer;
     public int currentProjectile;
-    public bool[] spaceships = { true, false };
-    public bool[] projectiles = { true, false };
+    public bool[] spaceships = { true, false, false, false, false, false };
+    public bool[] projectiles = { true, false, false, false, false, false };
 
 
     public GameData()

@@ -24,6 +24,7 @@ public class Items : MonoBehaviour
             accept.currentProjectile = items[index];
         }
 
+        items[index].active = true;
     }
 
     public void changeIndex(int direction)
@@ -31,14 +32,23 @@ public class Items : MonoBehaviour
         items[index].active = false;
 
         index += direction;
-        index = Math.Abs(index % items.Length);
+        
+        if (index < 0)
+        {
+            index = items.Length - 1;
+        }
+        else if (index == items.Length)
+        {
+            index = 0;
+        }
 
         items[index].active = true;
 
         if (isSpaceships)
         {
             accept.currentSpaceship = items[index];
-        } else
+        }
+        else
         {
             accept.currentProjectile = items[index];
         }

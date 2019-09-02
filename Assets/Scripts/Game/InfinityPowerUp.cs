@@ -14,7 +14,7 @@ public class InfinityPowerUp : MonoBehaviour
         {
             player.infiniteShot = true;
             player.infiniteShotTimer = length;
-            player.timeBullet = 0.1f;
+            player.timeBullet = 0.5f;
             Destroy(gameObject);
         }
     }

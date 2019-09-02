@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
             if (infiniteShotTimer < 0)
             {
                 infiniteShot = false;
-                timeBullet = 0.5f;
+                timeBullet = 1.5f;
             }
         }
     }

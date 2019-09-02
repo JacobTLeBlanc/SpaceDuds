@@ -276,7 +276,7 @@ MonoBehaviour:
   distance: 0.5
   bulletPrefab: {fileID: 0}
   timeInvicible: 2
-  timeBullet: 1
+  timeBullet: 1.5
   tripleShot: 0
   tripleShotTimer: 0
   infiniteShot: 0
