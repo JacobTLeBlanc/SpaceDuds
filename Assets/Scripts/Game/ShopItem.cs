@@ -28,7 +28,7 @@ public class ShopItem : MonoBehaviour
             return true;
         }
 
-        if (SaveLoad.data.totalCoins > price)
+        if (SaveLoad.data.totalCoins >= price)
         {
             SaveLoad.data.totalCoins -= price;
             isSold = true;

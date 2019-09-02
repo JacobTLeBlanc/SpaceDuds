@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShopAccept : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class ShopAccept : MonoBehaviour
         {
             SaveLoad.data.currentPlayer = item.shopIndex;
         } 
+        else
+        {
+            Debug.Log("Can't Afford");
+            return;
+        }
 
         item = currentProjectile.GetComponent<ShopItem>();
 
@@ -31,8 +37,14 @@ public class ShopAccept : MonoBehaviour
         {
             SaveLoad.data.currentProjectile = item.shopIndex;
         }
+        else
+        {
+            Debug.Log("Can't Afford");
+            return;
+        }
 
         SaveLoad.Save();
+        SceneManager.LoadScene("MainMenu");
     }
 
 
