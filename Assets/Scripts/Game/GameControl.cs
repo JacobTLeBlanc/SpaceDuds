@@ -57,6 +57,7 @@ public class GameControl : MonoBehaviour
     public bool bossBattle = false;
     public bool bossSpawn = false;
     float bossDelay;
+    float bossDelayLength = 4.0f;
     Quaternion rotateZ = new Quaternion(0, 0, -180, 0);
 
     // Difficulty
@@ -75,7 +76,7 @@ public class GameControl : MonoBehaviour
         // Start timer
         scoreTimer = scoreTimerLength;      
         timerAsteroid = asteroidTimerLength;  
-        bossDelay = asteroidTimerLength;
+        bossDelay = bossDelayLength;
 
         // Load
         SaveLoad.Load();
@@ -131,6 +132,7 @@ public class GameControl : MonoBehaviour
                 Instantiate(bosses[currentBoss % bosses.Length], gameObject.transform.position + Vector3.up * 4, rotateZ);
                 bossSpawn = true;
                 currentBoss++;
+                bossDelay = bossDelayLength;
             }
         }
 
