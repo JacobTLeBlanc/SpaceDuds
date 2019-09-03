@@ -11,11 +11,11 @@ public class ItemButton : MonoBehaviour
     private void Start()
     {
         Button btn = this.GetComponent<Button>();
-        btn.onClick.AddListener(changeItem);
+        btn.onClick.AddListener(changeItem); // On Click Change Item
     }
 
     void changeItem()
     {
-        items.changeIndex(direction);
+        items.changeIndex(direction); // Change Index on items
     }
 }

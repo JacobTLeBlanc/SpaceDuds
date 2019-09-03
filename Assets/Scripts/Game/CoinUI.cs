@@ -5,17 +5,12 @@ using UnityEngine.UI;
 
 public class CoinUI : MonoBehaviour
 {
-    public Text coinAmount;
+    public Text coinAmount; // Get Text UI
 
     // Start is called before the first frame update
     void Start()
     {
-        coinAmount.text = SaveLoad.data.totalCoins.ToString();
+        coinAmount.text = SaveLoad.data.totalCoins.ToString(); // Set Text to Highscore
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

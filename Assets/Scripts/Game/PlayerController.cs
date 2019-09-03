@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 0.1f; // Player speed
-    public float distance;
+    public float distance; // Distance from center to shoot projectile
 
     public GameObject bulletPrefab; // Bullet Prefab
     Rigidbody2D rb2d; 
@@ -43,14 +43,16 @@ public class PlayerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>(); // Get RigidBody component
 
-        currentHealth = maxHealth;
+        currentHealth = maxHealth; // Health
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Test on computer
+        // Buttonm Input
         horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+
+        // Test on Computer
         // if (Input.GetKeyDown(KeyCode.Space))
         // {
         //     if (tripleShot)
@@ -81,6 +83,7 @@ public class PlayerController : MonoBehaviour
             invicibilityFlashTimer -= Time.deltaTime;
             invicibleTimer -= Time.deltaTime;
 
+            // Flash for invicibilty
             if (invicibilityFlashTimer < 0)
             {
                 if (spriteRender)
@@ -115,6 +118,7 @@ public class PlayerController : MonoBehaviour
             UIBullet.instance.SetValue((timeBullet - bulletTimer) * 1.0f/timeBullet);
         }
 
+        // Triple Shot Timer
         if (tripleShot)
         {
             tripleShotTimer -= Time.deltaTime;
@@ -125,6 +129,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // Infinite Shot Timer
         if (infiniteShot)
         {
             infiniteShotTimer -= Time.deltaTime;
@@ -167,19 +172,24 @@ public class PlayerController : MonoBehaviour
         bulletTimer = timeBullet;
     }
 
+    // Triple Fire PowerUp
     void TripleFire()
     {
+        // if delay is not finished, exit method
         if (bulletShot) {
             return;
         }
 
+        // Spawn bullets
         GameObject bullet1 = Instantiate(bulletPrefab, rb2d.position + Vector2.up * 0.5f, Quaternion.identity);
         GameObject bullet2 = Instantiate(bulletPrefab, rb2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
+        // Right Bullet Launch
         Vector2 direction = new Vector2(0.25f, 1.0f);
         Projectile projectile = bullet1.GetComponent<Projectile>();
         projectile.Launch(direction, 300.0f);
 
+        // Left Bullet Launch
         direction = new Vector2(-0.25f, 1.0f);
         projectile = bullet2.GetComponent<Projectile>();
         projectile.Launch(direction, 300.0f);
@@ -205,6 +215,7 @@ public class PlayerController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealth.instance.updateHearts(currentHealth);
 
+        // Gameover
         if (health == 0)
         {
             GameControl.instance.gameOver = true;

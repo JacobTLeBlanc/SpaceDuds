@@ -6,21 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class ShopAccept : MonoBehaviour
 {
-    public GameObject currentSpaceship;
-    public GameObject currentProjectile;
+    public GameObject currentSpaceship; // Current Spaceship
+    public GameObject currentProjectile; // Current Projectile
 
     private void Awake()
     {
-        SaveLoad.Load();
+        SaveLoad.Load(); // Load
 
-        Button btn = this.GetComponent<Button>();
-        btn.onClick.AddListener(Accept);
+        Button btn = this.GetComponent<Button>(); // Button Component
+        btn.onClick.AddListener(Accept); // On Click Accept
     }
 
     void Accept()
     {
+        // Get Spaceship
         ShopItem item = currentSpaceship.GetComponent<ShopItem>();
 
+        // Check if it can be bought/is already sold
         if (item.buy())
         {
             SaveLoad.data.currentPlayer = item.shopIndex;
@@ -31,8 +33,10 @@ public class ShopAccept : MonoBehaviour
             return;
         }
 
+        // Get Projectile
         item = currentProjectile.GetComponent<ShopItem>();
 
+        // Check if it can be bought/is already sold\\
         if (item.buy())
         {
             SaveLoad.data.currentProjectile = item.shopIndex;
@@ -43,7 +47,10 @@ public class ShopAccept : MonoBehaviour
             return;
         }
 
+        // Save
         SaveLoad.Save();
+
+        // Load Menu
         SceneManager.LoadScene("MainMenu");
     }
 

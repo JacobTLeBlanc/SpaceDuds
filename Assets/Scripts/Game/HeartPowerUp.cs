@@ -8,12 +8,12 @@ public class HeartPowerUp : MonoBehaviour
     // Add health if player collides with heart
     void OnCollisionEnter2D(Collision2D other)
     {
-        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+        PlayerController player = other.gameObject.GetComponent<PlayerController>(); // Player Controller
 
-        if (player != null)
+        if (player != null) // Check if player
         {
-            player.ChangeHealth(1);
-            Destroy(gameObject);
+            player.ChangeHealth(1); // Add health
+            Destroy(gameObject); // Destroy Object
         }
     }
 }

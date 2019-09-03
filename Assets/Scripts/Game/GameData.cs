@@ -5,20 +5,21 @@ using System.Collections.Generic;
 [System.Serializable]
 public class GameData
 {
-    public int totalCoins;
-    public int highscore;
-    public int currentPlayer;
-    public int currentProjectile;
-    public bool[] spaceships = { true, false, false, false, false, false };
-    public bool[] projectiles = { true, false, false, false, false, false };
+    // Data
+    public int totalCoins; // Coins
+    public int highscore; // Highscore
+    public int currentPlayer; // Current Spaceship
+    public int currentProjectile; // Current Projectile
+    public bool[] spaceships = { true, false, false, false, false, false }; // Spaceships bought
+    public bool[] projectiles = { true, false, false, false, false, false }; // Projectiles bought
 
 
     public GameData()
     {
+        // Set all data to initial values
         totalCoins = 0;
         highscore = 0;
         currentPlayer = 0;
         currentProjectile = 0;
     }
-
 }

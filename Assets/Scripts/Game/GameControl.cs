@@ -134,28 +134,39 @@ public class GameControl : MonoBehaviour
             }
         }
 
+        // GameOver
         if (gameOver)
         {
+            // UI
             controlsUI.active = false;
             gameOverUI.active = true;
             bulletUI.active = false;
             healthUI.active = false;
+
+            // Stop Scrolling
             scrollSpeed = 0.0f;
 
+            // Check if score is new highscore
             if (score > SaveLoad.data.highscore)
             {
-                SaveLoad.data.highscore = score;
+                SaveLoad.data.highscore = score; // set highscore
             }
 
-            highScore.text = "HighScore: " + SaveLoad.data.highscore.ToString();
+            // Show highscore
+            highScore.text = "HighScore: " + SaveLoad.data.highscore.ToString(); 
 
+            // Save data
             SaveLoad.data.totalCoins = coins;
             SaveLoad.Save();
         }
 
+        // Pause
         if (pause)
         {
+            // Stop scrolling
             scrollSpeed = 0.0f;
+
+            // UI
             bulletUI.active = false;
             healthUI.active = false;
             controlsUI.active = false;
@@ -212,28 +223,33 @@ public class GameControl : MonoBehaviour
         coinAmount.text = coins.ToString();
     }
 
+    // PowerUps
     public void spawnPowerUp(int chance, Vector3 position)
     {
+        // Random Number
         int randInt = Random.Range(0, chance);
 
+        // If random number matches, spawn powerup
         if (randInt == 0)
         {
-            Instantiate(heartPrefab, position, Quaternion.identity);
+            Instantiate(heartPrefab, position, Quaternion.identity); // Heart
         }
 
         if (randInt == 1)
         {
-            Instantiate(triplePrefab, position, Quaternion.identity);
+            Instantiate(triplePrefab, position, Quaternion.identity); // Triple Shot
         }
 
         if (randInt == 2)
         {
-            Instantiate(infinityPrefab, position, Quaternion.identity);
+            Instantiate(infinityPrefab, position, Quaternion.identity); // Infinity Shot
         }
     }
 
+    // Ads
     public void ShowAd()
     {
+        // If ready, show ad
         if (Advertisement.IsReady())
         {
             Advertisement.Show();

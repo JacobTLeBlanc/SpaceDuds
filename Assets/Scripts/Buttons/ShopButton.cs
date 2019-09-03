@@ -10,12 +10,12 @@ public class ShopButton : MonoBehaviour
     void Start()
     {
         Button btn = this.GetComponent<Button>();
-        btn.onClick.AddListener(openShop);
+        btn.onClick.AddListener(openShop); // Open Shop on Click
     }
 
     // Update is called once per frame
     void openShop()
     {
-        SceneManager.LoadScene("Shop");
+        SceneManager.LoadScene("Shop"); // Load Shop
     }
 }

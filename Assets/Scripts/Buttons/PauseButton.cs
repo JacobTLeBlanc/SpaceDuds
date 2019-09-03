@@ -9,11 +9,11 @@ public class PauseButton : MonoBehaviour
     void Start()
     {
         Button btn = this.GetComponent<Button>(); // Get Button
-        btn.onClick.AddListener(pauseGame); // Play Game On Click
+        btn.onClick.AddListener(pauseGame); // Pause Game On Click
     }
 
     void pauseGame()
     {
-        GameControl.instance.pause = true;
+        GameControl.instance.pause = true; // Pause Game
     }
 }

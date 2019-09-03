@@ -8,12 +8,13 @@ public class Coin : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
 
-        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+        PlayerController player = other.gameObject.GetComponent<PlayerController>(); // Get Player Controller
 
+        // Check if player
         if (player != null)
         {
-            GameControl.instance.addCoin();
-            Destroy(gameObject);
+            GameControl.instance.addCoin(); // Add coin to counter
+            Destroy(gameObject); // Destroy object
         }
     }
 }

@@ -5,19 +5,13 @@ using UnityEngine.UI;
 
 public class MenuUI : MonoBehaviour
 {
-    public Text highscore;
+    public Text highscore; // Get Text UI
 
     // Start is called before the first frame update
     void Start()
     {
-        SaveLoad.Load();
+        SaveLoad.Load(); // Load
 
-        highscore.text = "High: " + SaveLoad.data.highscore.ToString() + " km";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        highscore.text = "High: " + SaveLoad.data.highscore.ToString() + " km"; // Set Highscore
     }
 }
