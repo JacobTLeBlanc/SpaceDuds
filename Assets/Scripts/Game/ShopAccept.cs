@@ -63,6 +63,8 @@ public class ShopAccept : MonoBehaviour
         else
         {
             Debug.Log("Can't Afford");
+            notEnough.active = true;
+            timer = timerLength;
             return;
         }
 

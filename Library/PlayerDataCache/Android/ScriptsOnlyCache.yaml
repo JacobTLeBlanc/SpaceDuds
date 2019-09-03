@@ -17,6 +17,7 @@ ScriptsOnlyBuild:
     - ItemButton
     - Items
     - MenuButton
+    - MenuUI
     - PauseButton
     - PlayButton
     - PlayerController
@@ -40,6 +41,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.Advertisements.dll:
+    - UnityEngine.Advertisements.Editor.Placeholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -74,6 +77,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -142,7 +149,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10894}
     - Class: 114
-      Script: {instanceID: 10912}
+      Script: {instanceID: 10914}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -174,6 +181,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -196,6 +207,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10056}
     - Class: 114
       Script: {instanceID: 10122}
+    - Class: 114
+      Script: {instanceID: 10910}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -226,6 +239,10 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -275,6 +292,10 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -351,7 +372,7 @@ ScriptsOnlyBuild:
     className: ShopItem
   - hash:
       serializedVersion: 2
-      Hash: 195e387c352ec59d43c14c291549c316
+      Hash: 0e02e2819b245ed7dac4246ddca06dcb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameControl
@@ -601,6 +622,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
     className: TiltInput
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 6061ab9bd8e509a39ea16eeab5cb03e9
@@ -1083,7 +1116,7 @@ ScriptsOnlyBuild:
     className: Asteroid
   - hash:
       serializedVersion: 2
-      Hash: fb6e8c736cd207d6736a2f536a9343ff
+      Hash: 3b0fd3f1486e24d17e3e62b36d841624
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopAccept
@@ -1377,6 +1410,12 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
+      Hash: a9917ea38f5b8ce91c91108c27dbd47c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuUI
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1405,4 +1444,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/Settings.unity
   - Assets/Scenes/Shop.unity
-  playerPath: C:/Users/lebla/Downloads/MyCode/SpaceDuds/Builds/Android_0.8.apk
+  playerPath: C:/Users/lebla/Downloads/MyCode/SpaceDuds/Builds/Android_0.9.apk
