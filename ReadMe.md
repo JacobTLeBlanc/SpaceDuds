@@ -16,7 +16,7 @@ List of things to add:
 	[x] Settings Screen
 	[x] Touch Controls
 	[x] Pause Button
-	[ ] Music
+	[x] Music
 	[ ] Sound Effects ???
 
 List of bugs:
