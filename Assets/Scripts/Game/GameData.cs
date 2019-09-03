@@ -12,6 +12,7 @@ public class GameData
     public int currentProjectile; // Current Projectile
     public bool[] spaceships = { true, false, false, false, false, false }; // Spaceships bought
     public bool[] projectiles = { true, false, false, false, false, false }; // Projectiles bought
+    public bool musicOn = true;
 
 
     public GameData()

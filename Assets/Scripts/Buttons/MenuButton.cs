@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuButton : MonoBehaviour
 {
-   
+    public Music gameMusic;
+
     void Start()
     {
         Button btn = this.GetComponent<Button>(); // Get Button
@@ -15,6 +16,11 @@ public class MenuButton : MonoBehaviour
 
     void openMenu()
     {
+        if (gameMusic != null)
+        {
+            gameMusic.StopMusic();
+        }
+
         SceneManager.LoadScene("MainMenu"); // Load Menu
     }
 }

@@ -60,6 +60,9 @@ public class GameControl : MonoBehaviour
     float bossDelayLength = 4.0f;
     Quaternion rotateZ = new Quaternion(0, 0, -180, 0);
 
+    // Music
+    public Music gameMusic;
+
     // Difficulty
     public float difficultyScale = 1.0f;
 
@@ -88,6 +91,9 @@ public class GameControl : MonoBehaviour
         // Get coins
         coins = SaveLoad.data.totalCoins;
         coinAmount.text = coins.ToString();
+
+        // Music
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
     }
 
     // Update is called once per frame

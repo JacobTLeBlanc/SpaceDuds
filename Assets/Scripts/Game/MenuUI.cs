@@ -13,5 +13,7 @@ public class MenuUI : MonoBehaviour
         SaveLoad.Load(); // Load
 
         highscore.text = "High: " + SaveLoad.data.highscore.ToString() + " km"; // Set Highscore
+
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
     }
 }

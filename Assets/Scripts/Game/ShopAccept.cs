@@ -17,6 +17,8 @@ public class ShopAccept : MonoBehaviour
     {
         SaveLoad.Load(); // Load
 
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
+
         Button btn = this.GetComponent<Button>(); // Button Component
         btn.onClick.AddListener(Accept); // On Click Accept
     }
